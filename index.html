@@ -476,6 +476,22 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   #problemMineCanvas,#aiOrbCanvas{display:none !important}
   canvas[style*="max-height:380px"]{display:none !important}
 
+  /* New slide canvases — keep visible but constrain height */
+  #wkCanvas{max-height:280px !important}
+  #wkMapWrap{max-height:300px !important;border-radius:10px !important}
+  #sgsCanvas,#nsgCanvas{max-height:260px !important}
+
+  /* New slides — force single column + proper padding */
+  #s14>div:nth-child(4),#s15>div:nth-child(4),
+  #s16>div:nth-child(4),#s17>div:nth-child(4),
+  #s12>div:nth-child(3){
+    grid-template-columns:1fr !important;gap:12px !important;
+    padding:10px 16px 16px !important;
+  }
+
+  /* Popup on map — full width on mobile */
+  #wkPopup{max-width:90vw !important;min-width:200px !important}
+
   /* QASSAS product slide */
   #s4 .qcontent{grid-template-columns:1fr !important}
   #s4 .qright{display:none}
@@ -490,13 +506,6 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   /* Stats grid → 2 columns */
   [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr !important}
   [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr 1fr !important}
-
-  /* New slides (s14-s17) */
-  #s14>div:nth-child(4),#s15>div:nth-child(4),#s16>div:nth-child(4),#s17>div:nth-child(4){
-    grid-template-columns:1fr !important;gap:12px !important;
-    padding-left:16px !important;padding-right:16px !important;
-  }
-  #sgsCanvas,#nsgCanvas{max-height:250px}
 
   /* Closing slide */
   #s13 .big-title{font-size:clamp(36px,12vw,56px) !important}
