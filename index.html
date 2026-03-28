@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ZYNTRA — Pitch Deck 2025</title>
+<title>ZYNTRA — Pitch Deck 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
 <style>
@@ -63,12 +63,12 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 #snum{color:var(--gray);font-family:var(--fh);font-size:11px;letter-spacing:3px;min-width:44px;text-align:center}
 
 /* ── LOGO ── */
-.logo{font-family:var(--fh);font-size:15px;font-weight:700;letter-spacing:5px;color:var(--white)}
+.logo{font-family:var(--fh);font-size:20px;font-weight:700;letter-spacing:5px;color:var(--white)}
 .logo .g{background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 
 /* ── SLIDE HEADER ── */
 .shead{padding:20px 48px 0;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;position:relative;z-index:5}
-.slabel{font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--cyan)}
+.slabel{font-family:var(--fb);font-size:15px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--cyan)}
 .slabel.gold{color:var(--gold)}
 
 /* ── BG ELEMENTS ── */
@@ -102,8 +102,8 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 .card:hover{box-shadow:0 16px 48px rgba(0,0,0,.5)}
 
 /* ── TYPOGRAPHY ── */
-.big-h{font-family:var(--fh);font-size:38px;font-weight:700;color:var(--white);line-height:1.1}
-.sub-h{font-family:var(--fb);font-size:13px;color:var(--lgray);margin-top:6px}
+.big-h{font-family:var(--fh);font-size:50px;font-weight:700;color:var(--white);line-height:1.1}
+.sub-h{font-family:var(--fb);font-size:18px;color:var(--lgray);margin-top:6px;line-height:1.6}
 .grad-text{background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .gold-text{background:linear-gradient(90deg,var(--gold),#F0C050);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 
@@ -309,6 +309,225 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 @keyframes heatPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.9;transform:scale(1.08)}}
 @keyframes nodeAppear{0%{transform:scale(0);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
 @keyframes scanSweep{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+/* ════════════════════════════════════
+   READABILITY — Force larger text globally
+   Overrides ALL inline font-size with !important
+   ════════════════════════════════════ */
+
+/* Scale tier: +5-6px bump on every inline size */
+.slide [style*="font-size:9px"]{font-size:15px !important}
+.slide [style*="font-size:10px"]{font-size:16px !important}
+.slide [style*="font-size:10.5px"]{font-size:16px !important}
+.slide [style*="font-size:11px"]{font-size:17px !important}
+.slide [style*="font-size:11.5px"]{font-size:17px !important}
+.slide [style*="font-size:12px"]{font-size:18px !important}
+.slide [style*="font-size:13px"]{font-size:19px !important}
+.slide [style*="font-size:14px"]{font-size:20px !important}
+.slide [style*="font-size:16px"]{font-size:22px !important}
+.slide [style*="font-size:17px"]{font-size:23px !important}
+.slide [style*="font-size:22px"]{font-size:28px !important}
+.slide [style*="font-size:28px"]{font-size:36px !important}
+.slide [style*="font-size:30px"]{font-size:38px !important}
+.slide [style*="font-size:38px"]{font-size:48px !important}
+.slide [style*="font-size:42px"]{font-size:52px !important}
+.slide [style*="font-size:46px"]{font-size:56px !important}
+.slide [style*="font-size:48px"]{font-size:58px !important}
+
+/* Headings & titles */
+.big-h{font-size:50px !important}
+.sub-h{font-size:18px !important;line-height:1.65 !important}
+.slabel{font-size:15px !important}
+.logo{font-size:20px !important;letter-spacing:6px !important}
+
+/* Cover slide */
+#s1 .big-t{font-size:clamp(90px,13vw,150px) !important}
+#s1 .tagline{font-size:22px !important;letter-spacing:5px !important}
+#s1 .sub{font-size:16px !important}
+#s1 .badge span{font-size:14px !important}
+
+/* QASSAS title */
+#s4 .qtitle{font-size:80px !important}
+#s4 .ftext{font-size:17px !important}
+#s4 .feat{padding:12px 16px !important}
+
+/* Map badges */
+#s5 .maptitle{font-size:28px !important}
+#s5 .mbadge{font-size:14px !important;padding:6px 16px !important}
+
+/* Cards body text */
+.card{font-size:17px !important}
+
+/* Nav bar */
+#nav{padding:12px 28px}
+#prev,#next{font-size:15px;padding:8px 20px}
+#snum{font-size:14px;letter-spacing:3px}
+.dot{width:9px;height:9px}
+
+/* Closing slide */
+#s13 .cta-box [style*="font-size:18px"]{font-size:28px !important}
+#s13 .cta-box [style*="font-size:11px"]{font-size:16px !important}
+#s13 .big-title{font-size:clamp(72px,10vw,120px) !important}
+
+/* Stat numbers — keep large gradient text even bigger */
+.slide [style*="font-size:24px"]{font-size:34px !important}
+.slide [style*="font-size:26px"]{font-size:36px !important}
+.slide [style*="font-size:28px"][style*="font-weight:700"]{font-size:40px !important}
+.slide [style*="font-size:34px"]{font-size:44px !important}
+
+/* Table headers & rows */
+.slide [style*="letter-spacing:2px"][style*="text-transform:uppercase"]{font-size:15px !important}
+
+/* Icon sizes in cards */
+.slide [style*="font-size:17px"]{font-size:22px !important}
+.slide [style*="font-size:20px"]{font-size:26px !important}
+.slide [style*="font-size:24px"]{font-size:30px !important}
+
+/* ════════════════════════════════════
+   MOBILE RESPONSIVE — Phone screens
+   ════════════════════════════════════ */
+@media(max-width:1024px){
+  .shead{padding:14px 28px 0}
+  .big-h{font-size:36px !important}
+  .sub-h{font-size:14px !important}
+  .slide [style*="font-size:9px"]{font-size:12px !important}
+  .slide [style*="font-size:10px"]{font-size:13px !important}
+  .slide [style*="font-size:10.5px"]{font-size:13px !important}
+  .slide [style*="font-size:11px"]{font-size:14px !important}
+  .slide [style*="font-size:11.5px"]{font-size:14px !important}
+  .slide [style*="font-size:12px"]{font-size:15px !important}
+  #s1 .big-t{font-size:clamp(56px,10vw,90px) !important}
+  #s1 .tagline{font-size:16px !important;letter-spacing:3px !important}
+  #s4 .qtitle{font-size:52px !important}
+  #sA .layout,#sB .layout,#sC .layout{grid-template-columns:1fr}
+  #sA .right,#sB .right,#sC .right{display:none}
+}
+
+@media(max-width:768px){
+  html,body{overflow-x:hidden;cursor:auto !important}
+  .cursor,.cursor-trail{display:none !important}
+  #lang-switch{top:8px;transform:translateX(-50%) scale(.9)}
+
+  /* Slides become scrollable */
+  .slide{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+
+  /* Headers */
+  .shead{padding:10px 16px 0;flex-wrap:wrap;gap:6px}
+  .logo{font-size:14px;letter-spacing:3px}
+  .slabel{font-size:10px;letter-spacing:2px}
+
+  /* Typography */
+  .big-h{font-size:26px !important}
+  .sub-h{font-size:12px !important;line-height:1.6}
+
+  /* Reset inline font overrides for mobile */
+  .slide [style*="font-size:9px"]{font-size:11px !important}
+  .slide [style*="font-size:10px"]{font-size:12px !important}
+  .slide [style*="font-size:10.5px"]{font-size:12px !important}
+  .slide [style*="font-size:11px"]{font-size:13px !important}
+  .slide [style*="font-size:11.5px"]{font-size:13px !important}
+  .slide [style*="font-size:12px"]{font-size:14px !important}
+  .slide [style*="font-size:13px"]{font-size:15px !important}
+  .slide [style*="font-size:14px"]{font-size:15px !important}
+  .slide [style*="font-size:16px"]{font-size:17px !important}
+  .slide [style*="font-size:22px"]{font-size:20px !important}
+  .slide [style*="font-size:28px"]{font-size:26px !important}
+  .slide [style*="font-size:38px"]{font-size:30px !important}
+  .slide [style*="font-size:46px"]{font-size:34px !important}
+  .slide [style*="font-size:48px"]{font-size:36px !important}
+
+  /* Cover slide */
+  #s1 .big-t{font-size:clamp(40px,14vw,60px) !important;letter-spacing:4px}
+  #s1 .tagline{font-size:12px !important;letter-spacing:1px}
+  #s1 .sub{font-size:11px !important;letter-spacing:1px}
+  #s1 .badge span{font-size:9px}
+  #s1>div:nth-child(5){grid-template-columns:1fr !important}
+  #s1>div:nth-child(5)>div:last-child{display:none}
+  #s1 .center{padding:0 16px !important}
+  #s1 .center>div:last-child{flex-wrap:wrap;gap:10px}
+  #s1 .center>div:last-child>div[style*="width:1px"]{display:none}
+
+  /* Grids → single column */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns:1fr 380px"],
+  [style*="grid-template-columns:1fr 420px"],
+  [style*="grid-template-columns:1fr 360px"],
+  [style*="grid-template-columns:1fr 480px"],
+  [style*="grid-template-columns:1fr 460px"],
+  [style*="grid-template-columns:1fr 500px"]{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Slide content padding */
+  .s2content,[class*="content"],
+  #s3>div:nth-child(3),#sB>div:nth-child(5),#sC>div:nth-child(5){
+    padding:10px 16px 16px !important;
+  }
+  [style*="padding:14px 48px"],[style*="padding:10px 48px"],[style*="padding:8px 48px"]{
+    padding-left:16px !important;padding-right:16px !important;
+  }
+
+  /* Cards */
+  .card{font-size:12px}
+  .card3d{transform:none !important}
+
+  /* Hide 3D canvases & right columns on mobile */
+  #coverCanvas,#problemCanvas,#solutionCanvas,#marketCanvas,
+  #problemMineCanvas,#aiOrbCanvas{display:none !important}
+  canvas[style*="max-height:380px"]{display:none !important}
+
+  /* QASSAS product slide */
+  #s4 .qcontent{grid-template-columns:1fr !important}
+  #s4 .qright{display:none}
+  #s4 .qleft{padding:14px 16px !important}
+  #s4 .qtitle{font-size:36px !important;letter-spacing:4px}
+
+  /* Map slide */
+  #s5 .map-topbar{padding:6px 16px;flex-wrap:wrap}
+  #s5 .maptitle{font-size:16px}
+  #s5 .mbadge{font-size:9px;padding:3px 8px}
+
+  /* Stats grid → 2 columns */
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr !important}
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr 1fr !important}
+
+  /* New slides (s14-s17) */
+  #s14>div:nth-child(4),#s15>div:nth-child(4),#s16>div:nth-child(4),#s17>div:nth-child(4){
+    grid-template-columns:1fr !important;gap:12px !important;
+    padding-left:16px !important;padding-right:16px !important;
+  }
+  #sgsCanvas,#nsgCanvas{max-height:250px}
+
+  /* Closing slide */
+  #s13 .big-title{font-size:clamp(36px,12vw,56px) !important}
+  #s13 .cta-box{padding:14px 16px !important}
+  #s13 .cta-box>div:first-child{font-size:14px !important}
+
+  /* Nav bar */
+  #nav{bottom:10px;padding:6px 14px;gap:8px;border-radius:30px}
+  #prev,#next{font-size:11px;padding:4px 10px}
+  #snum{font-size:10px;min-width:36px}
+  .dot{width:5px;height:5px}
+
+  /* Progress bar thicker */
+  #prog{height:4px}
+}
+
+@media(max-width:480px){
+  .big-h{font-size:22px !important}
+  .sub-h{font-size:11px !important}
+  #s1 .big-t{font-size:clamp(32px,16vw,48px) !important}
+  .shead{padding:8px 12px 0}
+  [style*="padding:14px 48px"],[style*="padding:10px 48px"],[style*="padding:8px 48px"]{
+    padding-left:12px !important;padding-right:12px !important;
+  }
+  .card{border-radius:10px}
+  #s13 .big-title{font-size:clamp(28px,14vw,44px) !important;letter-spacing:6px}
+  #s13>div:nth-child(5){padding:0 12px !important}
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr !important}
+  #nav{bottom:6px;padding:5px 10px}
+  .dot{width:4px;height:4px}
+}
 </style>
 </head>
 <body>
@@ -329,7 +548,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   <div id="dataStreams" style="position:absolute;inset:0;pointer-events:none;z-index:3"></div>
   <div class="shead">
     <div class="logo">ZYN<span class="g">TRA</span></div>
-    <div style="font-family:var(--fb);font-size:10px;letter-spacing:3px;color:var(--gray)">Q1 2025 · CONFIDENTIAL</div>
+    <div style="font-family:var(--fb);font-size:10px;letter-spacing:3px;color:var(--gray)">Q1 2026 · CONFIDENTIAL</div>
   </div>
   <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;position:relative;z-index:5">
     <!-- LEFT -->
@@ -339,6 +558,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
       <div class="tagline">Powering Saudi Arabia's AI Future — From Data to Action</div>
       <div class="sub" style="margin-top:8px">AI Infrastructure &nbsp;·&nbsp; Autonomous Robotics &nbsp;·&nbsp; Mineral Intelligence &nbsp;·&nbsp; Digital Twins &nbsp;·&nbsp; Vision 2030</div>
       <div class="badge" style="margin-top:22px"><div class="dv"></div><span>Aligned with Vision 2030</span></div>
+      <div class="badge" style="margin-top:8px;border-color:rgba(0,195,255,.4);background:rgba(0,195,255,.07)" id="s1-aibadge"><div class="dv" style="background:var(--cyan)"></div><span style="color:var(--cyan)" id="s1-aibadge-text">2026 — The Year of Artificial Intelligence in Saudi Arabia</span></div>
       <div style="display:flex;gap:16px;margin-top:24px">
         <div style="text-align:center">
           <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--cyan)"><span class="count-num" data-target="15" data-prefix="$" data-suffix="M" data-dur="1400">$15M</span></div>
@@ -429,19 +649,19 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
         <div style="font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:3px;color:var(--magenta);text-transform:uppercase;margin-bottom:2px">Traditional Methods Rely On:</div>
         <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(192,64,232,.4)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''">
           <div style="width:38px;height:38px;border-radius:9px;background:rgba(192,64,232,.12);border:1px solid rgba(192,64,232,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">🗺️</div>
-          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)">Large-Scale Geological Surveys</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55">Entire regions traversed manually by dozens of specialists over months, with limited resolution and accuracy.</div></div>
+          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)" id="sA-m1h">Large-Scale Geological Surveys</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55" id="sA-m1b">Entire regions traversed manually by dozens of specialists over months, with limited resolution and accuracy.</div></div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(123,47,255,.4)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''">
           <div style="width:38px;height:38px;border-radius:9px;background:rgba(123,47,255,.12);border:1px solid rgba(123,47,255,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">🔬</div>
-          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)">Extensive Field Investigations</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55">Field teams in harsh desert terrain collecting samples at $200–500 per sample in lab fees alone.</div></div>
+          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)" id="sA-m2h">Extensive Field Investigations</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55" id="sA-m2b">Field teams in harsh desert terrain collecting samples at $200–500 per sample in lab fees alone.</div></div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(30,111,255,.4)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''">
           <div style="width:38px;height:38px;border-radius:9px;background:rgba(30,111,255,.12);border:1px solid rgba(30,111,255,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">✈️</div>
-          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)">Airborne Geophysical Mapping</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55">Helicopter and fixed-wing surveys cost $2–5M per campaign with extensive manual interpretation required.</div></div>
+          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)" id="sA-m3h">Airborne Geophysical Mapping</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55" id="sA-m3b">Helicopter and fixed-wing surveys cost $2–5M per campaign with extensive manual interpretation required.</div></div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(212,168,67,.4)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''">
           <div style="width:38px;height:38px;border-radius:9px;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">⛏️</div>
-          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)">Multiple Drilling Campaigns</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55">60–70% of exploration budgets consumed before drilling one hole. A 5,000 km² survey: $8–15M, 24 months.</div></div>
+          <div><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--white)" id="sA-m4h">Multiple Drilling Campaigns</div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:3px;line-height:1.55" id="sA-m4b">60–70% of exploration budgets consumed before drilling one hole. A 5,000 km² survey: $8–15M, 24 months.</div></div>
         </div>
       </div>
       <div style="padding:11px 15px;border-radius:12px;background:rgba(212,168,67,.06);border:1px solid rgba(212,168,67,.2);display:flex;align-items:center;gap:12px">
@@ -2412,10 +2632,10 @@ setTimeout(()=&gt;{ resize(); }, 100);
           <div style="font-family:var(--fh);font-size:24px;font-weight:700;color:var(--purple);opacity:.4;min-width:30px">3</div>
           <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--purple);min-width:120px">AI ENGINE</div>
           <div style="display:flex;flex-wrap:wrap;gap:5px">
-            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.07);border:1px solid rgba(123,47,255,.2);font-family:var(--fb);font-size:11px;color:var(--lgray)">CNN / U-Net</span>
-            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.07);border:1px solid rgba(123,47,255,.2);font-family:var(--fb);font-size:11px;color:var(--lgray)">Graph Neural Networks</span>
-            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.07);border:1px solid rgba(123,47,255,.2);font-family:var(--fb);font-size:11px;color:var(--lgray)">XGBoost Ensemble</span>
-            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.15);border:1px solid rgba(123,47,255,.4);font-family:var(--fb);font-size:11px;color:var(--purple);font-weight:700">AUC-ROC 0.87 ✓</span>
+            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.07);border:1px solid rgba(123,47,255,.2);font-family:var(--fb);font-size:11px;color:var(--lgray)">QASSAS Satellite Analysis</span>
+            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.07);border:1px solid rgba(123,47,255,.2);font-family:var(--fb);font-size:11px;color:var(--lgray)">QASSAS Structural Analysis</span>
+            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.07);border:1px solid rgba(123,47,255,.2);font-family:var(--fb);font-size:11px;color:var(--lgray)">QASSAS Geochemical Analysis</span>
+            <span style="padding:3px 9px;border-radius:20px;background:rgba(123,47,255,.15);border:1px solid rgba(123,47,255,.4);font-family:var(--fb);font-size:11px;color:var(--purple);font-weight:700">Multi-Model AI Engine ✓</span>
           </div>
         </div>
         <div class="card card3d" style="padding:14px 20px;display:flex;align-items:center;gap:20px;border-left:4px solid var(--blue)">
@@ -2682,7 +2902,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
       <div style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1">
         <div style="position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple),var(--magenta));z-index:0;filter:blur(1px)"></div>
         <div style="display:flex;flex-direction:column;align-items:center;gap:9px;position:relative;z-index:1">
-          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--cyan)"><span class="count-num" data-target="2025" data-prefix="Q1-Q2 " data-dur="1600">Q1–Q2 2025</span></div>
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--cyan)"><span class="count-num" data-target="2026" data-prefix="Q1-Q2 " data-dur="1600">Q1–Q2 2026</span></div>
           <div style="width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 16px var(--cyan);position:relative"><div style="position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--cyan);opacity:.35;animation:pulse 2s ease-in-out infinite"></div></div>
           <div class="card card3d" style="padding:16px 13px;width:100%">
             <div style="font-family:var(--fb);font-size:9px;font-weight:700;letter-spacing:2px;color:var(--cyan);margin-bottom:4px">PHASE 1 · NOW</div>
@@ -2697,7 +2917,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
           </div>
         </div>
         <div style="display:flex;flex-direction:column;align-items:center;gap:9px;position:relative;z-index:1">
-          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--blue)"><span class="count-num" data-target="2025" data-prefix="Q3–Q4 " data-suffix="" data-dur="1700">Q3–Q4 2025</span></div>
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--blue)"><span class="count-num" data-target="2026" data-prefix="Q3–Q4 " data-suffix="" data-dur="1700">Q3–Q4 2026</span></div>
           <div style="width:14px;height:14px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue);position:relative"><div style="position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--blue);opacity:.35;animation:pulse 2s ease-in-out infinite .5s"></div></div>
           <div class="card card3d" style="padding:16px 13px;width:100%">
             <div style="font-family:var(--fb);font-size:9px;font-weight:700;letter-spacing:2px;color:var(--blue);margin-bottom:4px">PHASE 2 · REVENUE</div>
@@ -2745,11 +2965,551 @@ setTimeout(()=&gt;{ resize(); }, 100);
 </div>
 
 <!-- ══════════════════════════════════════════════
+     SLIDE 14 — QASSAS DATA PROCESSED (Round-11)
+     ══════════════════════════════════════════════ -->
+<div class="slide" id="s14">
+  <div class="gbar"></div>
+  <div class="bg-grid" style="opacity:.25"></div>
+  <div class="orb" style="width:500px;height:500px;left:-120px;top:-80px;background:radial-gradient(circle,rgba(0,195,255,.18) 0%,transparent 70%);animation:orbPulse 7s ease-in-out infinite"></div>
+  <div class="shead"><div class="logo">ZYN<span class="g">TRA</span></div><div class="slabel gold" id="s14-label">15 / QASSAS Data Processed</div></div>
+  <div style="flex:1;padding:10px 48px 14px;display:grid;grid-template-columns:1fr 1fr;gap:16px;overflow:hidden">
+    <!-- LEFT: Title + Table + Stats + Summary -->
+    <div class="stagger" style="display:flex;flex-direction:column;gap:9px">
+      <div>
+        <div class="big-h" style="font-size:28px" id="s14-title">QASSAS Data Processed for<br><span class="gold-text">Wadi Khayyam — Arabian Shield</span></div>
+        <div class="sub-h" style="font-size:11.5px;margin-top:4px" id="s14-sub">The platform demonstrated its operational efficiency by processing data from the <b style="color:var(--white)">Mining – Round 11 (Wadi Khayyam)</b> program, part of the <b style="color:var(--cyan)">Accelerated Exploration Initiative</b> — a government effort aimed at speeding up exploration in the Kingdom and making more data available to investors through the <a href="https://taadeen.sa/ar/mining-" target="_blank" style="color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)">Saudi Mining Portal (Tadeen)</a>.</div>
+      </div>
+      <!-- Data Table -->
+      <div style="display:flex;flex-direction:column;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(90deg,rgba(212,168,67,.15),rgba(212,168,67,.06));padding:8px 14px;border-bottom:1px solid rgba(212,168,67,.2)">
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase" id="s14-th1">Data Type</div>
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;text-align:right" id="s14-th2">Quantity Processed</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:8px 14px;background:rgba(212,168,67,.08);border-bottom:1px solid rgba(255,255,255,.05)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)"></div><div style="font-family:var(--fb);font-size:11px;font-weight:700;color:var(--white)" id="s14-r1l">Total Files</div></div>
+          <div style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--gold);text-align:right" id="s14-r1v">15,526 files from Tadeen Data Room</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:6px 14px;background:rgba(13,24,40,.6);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:5px;height:5px;border-radius:50%;background:var(--cyan)"></div><div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray)" id="s14-r2l">Geochemical Samples</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--white);text-align:right" id="s14-r2v">800–1,200 files (soil &amp; rock)</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:6px 14px;background:rgba(13,24,40,.4);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:5px;height:5px;border-radius:50%;background:var(--purple)"></div><div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray)" id="s14-r3l">Aeromagnetic Surveys</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--white);text-align:right" id="s14-r3v">200–300 GeoTIFF grids</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:6px 14px;background:rgba(13,24,40,.6);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:5px;height:5px;border-radius:50%;background:var(--blue)"></div><div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray)" id="s14-r4l">Radiometric Surveys</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--white);text-align:right" id="s14-r4v">150–250 grids (K-Th-U)</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:6px 14px;background:rgba(13,24,40,.4);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:5px;height:5px;border-radius:50%;background:var(--magenta)"></div><div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray)" id="s14-r5l">Fault Networks</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--white);text-align:right" id="s14-r5v">300–500 Shapefile files</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:6px 14px;background:rgba(13,24,40,.6);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:5px;height:5px;border-radius:50%;background:var(--cyan)"></div><div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray)" id="s14-r6l">Geological Maps</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--white);text-align:right" id="s14-r6v">50–100 maps (1:100,000)</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:6px 14px;background:rgba(13,24,40,.4)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:5px;height:5px;border-radius:50%;background:var(--gold)"></div><div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray)" id="s14-r7l">Satellite Imagery</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--white);text-align:right" id="s14-r7v">Sentinel-2, ASTER, SRTM</div>
+        </div>
+      </div>
+      <!-- Compact stat strip -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+        <div class="card card3d" style="padding:12px 10px;text-align:center;border-top:2px solid var(--gold)">
+          <div style="font-family:var(--fh);font-size:28px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--gold),#F0C050);-webkit-background-clip:text;-webkit-text-fill-color:transparent">15,526</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray);margin-top:3px" id="s14-stat1">Files Processed</div>
+        </div>
+        <div class="card card3d" style="padding:12px 10px;text-align:center;border-top:2px solid var(--cyan)">
+          <div style="font-family:var(--fh);font-size:28px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent">55</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray);margin-top:3px" id="s14-stat2">Exploration Targets</div>
+        </div>
+        <div class="card card3d" style="padding:12px 10px;text-align:center;border-top:2px solid var(--purple)">
+          <div style="font-family:var(--fh);font-size:24px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--purple),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent">SAR 17.5B</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray);margin-top:3px" id="s14-stat3">Projected NPV</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+        <div class="card card3d" style="padding:12px 10px;text-align:center;border-top:2px solid var(--magenta)">
+          <div style="font-family:var(--fh);font-size:28px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--magenta),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent">3,021 koz</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray);margin-top:3px" id="s14-stat4">Kilo-Ounces of Gold (oz t)</div>
+        </div>
+        <div class="card card3d" style="padding:12px 10px;text-align:center">
+          <div style="font-family:var(--fh);font-size:28px;font-weight:700;line-height:1;color:var(--cyan)">32h</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray);margin-top:3px" id="s14-stat5">Processing Time</div>
+        </div>
+        <div class="card card3d" style="padding:12px 10px;text-align:center">
+          <div style="font-family:var(--fh);font-size:28px;font-weight:700;line-height:1;color:var(--gold)">89%</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray);margin-top:3px" id="s14-stat6">Cost Savings</div>
+        </div>
+      </div>
+      <!-- Summary -->
+      <div style="padding:10px 14px;border-radius:10px;background:rgba(212,168,67,.06);border:1px solid rgba(212,168,67,.2)">
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.65" id="s14-summary">In just <b style="color:var(--gold)">32 hours</b>, the QASSAS platform analyzed <b style="color:var(--white)">15,526 geological profiles</b> covering <b style="color:var(--white)">11 areas</b> within the Wadi Khayyam region of the Arabian Shield. The analysis identified <b style="color:var(--cyan)">55 high-priority exploration sites</b> ready for drilling programs, with an estimated economic value exceeding <b style="color:var(--gold)">SAR 17.5 billion</b> and an initial estimate of over <b style="color:var(--white)">3 million ounces of gold</b>. Furthermore, it reduced operational costs by <b style="color:var(--cyan)">89%</b> compared to traditional methods.</div>
+      </div>
+    </div>
+    <!-- RIGHT: Live Map -->
+    <div style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,195,255,.2);box-shadow:0 0 40px rgba(0,195,255,.08)">
+      <!-- Map header bar -->
+      <div style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(6,10,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,195,255,.15)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s ease-in-out infinite"></div>
+          <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:2px;color:var(--cyan);text-transform:uppercase">LIVE MAP</div>
+        </div>
+        <div style="font-family:var(--fb);font-size:9px;letter-spacing:1.5px;color:var(--gray);text-transform:uppercase">Wadi Khayyam · Heatmap · Interactive</div>
+      </div>
+      <!-- Map iframe -->
+      <div style="position:relative;width:100%;height:100%;background:#0A0E1A;overflow:hidden" id="wkMapWrap">
+<canvas id="wkCanvas" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer"></canvas>
+
+<!-- Popup overlay (hidden by default) -->
+<div id="wkPopup" style="display:none;position:absolute;z-index:50;pointer-events:auto;max-width:300px;min-width:260px">
+  <div style="background:rgba(6,10,18,.97);border:1px solid rgba(0,195,255,.3);border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6);backdrop-filter:blur(12px)">
+    <div id="wkPopHead" style="background:#1B2A4A;padding:8px 12px">
+      <div id="wkPopId" style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px"></div>
+      <div id="wkPopPri" style="font-size:10px;color:rgba(255,255,255,.7)"></div>
+    </div>
+    <div style="padding:10px 12px">
+      <div style="text-align:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.08)">
+        <div id="wkPopScore" style="font-family:Rajdhani,sans-serif;font-size:28px;font-weight:700;color:#1D9E75"></div>
+        <div style="font-size:9px;color:#8899BB;letter-spacing:1px">QASSAS CONFIDENCE</div>
+      </div>
+      <table id="wkPopTable" style="width:100%;font-size:10px;border-collapse:collapse;margin:6px 0">
+      </table>
+    </div>
+    <div id="wkPopClose" style="text-align:center;padding:6px;border-top:1px solid rgba(255,255,255,.06);cursor:pointer;font-size:9px;color:#00C3FF;letter-spacing:2px" onclick="document.getElementById('wkPopup').style.display='none'">CLOSE ✕</div>
+  </div>
+</div>
+
+<!-- Coord badge -->
+<div style="position:absolute;top:8px;right:10px;z-index:10">
+  <div style="padding:4px 10px;border-radius:6px;background:rgba(6,10,18,.9);border:1px solid rgba(0,195,255,.2);font-family:Rajdhani,sans-serif;font-size:9px;letter-spacing:1.5px;color:#8899BB">22.68°N – 22.74°N · 44.93°E – 44.99°E</div>
+</div>
+
+<!-- Legend -->
+<div style="position:absolute;bottom:8px;right:10px;z-index:10;padding:8px 10px;border-radius:8px;background:rgba(6,10,18,.92);border:1px solid rgba(255,255,255,.08);font-size:9px;font-family:sans-serif">
+  <div style="font-weight:700;color:#D4A843;margin-bottom:4px;letter-spacing:1px;font-size:8px">QASSAS SCORE</div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#ff3300"></div><span style="color:#AAB8CC">> 0.70 HIGH</span></div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#ff9900"></div><span style="color:#AAB8CC">0.60–0.70</span></div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#ffcc00"></div><span style="color:#AAB8CC">< 0.60</span></div>
+</div>
+
+<!-- Click hint -->
+<div style="position:absolute;bottom:8px;left:10px;z-index:10;padding:5px 10px;border-radius:6px;background:rgba(0,195,255,.08);border:1px solid rgba(0,195,255,.15);font-size:9px;color:#00C3FF;font-family:sans-serif;letter-spacing:1px">Click markers for details</div>
+
+<script>
+(function(){
+var c=document.getElementById("wkCanvas"),ctx=c.getContext("2d");
+var popup=document.getElementById("wkPopup");
+var wrap=document.getElementById("wkMapWrap");
+
+var T=[
+  {n:1,id:"UP-ROUND-11-WK-AU-01",lat:22.726987,lon:44.975392,sc:0.633,pri:"MEDIUM",
+   sat:0.724,str:0.000,geo:1.000,geol:0.745,npv:"USD 201.4M",grade:"2.60 g/t Au",
+   ton:"1,890 kt",res:"158 oz",depth:"0–280m",holes:"4×280m RC",cost:"USD 358,400",roi:"63.3×"},
+  {n:2,id:"UP-ROUND-11-WK-AU-02",lat:22.726914,lon:44.977325,sc:0.632,pri:"MEDIUM",
+   sat:0.731,str:0.000,geo:1.000,geol:0.766,npv:"USD 154.5M",grade:"2.40 g/t Au",
+   ton:"2,100 kt",res:"162 oz",depth:"0–280m",holes:"4×280m RC",cost:"USD 358,400",roi:"63.2×"},
+  {n:3,id:"UP-ROUND-11-WK-AU-03",lat:22.731572,lon:44.96259,sc:0.631,pri:"MEDIUM",
+   sat:0.689,str:0.000,geo:1.000,geol:0.694,npv:"USD 132.0M",grade:"2.40 g/t Au",
+   ton:"1,890 kt",res:"46,500 oz",depth:"0–280m",holes:"4×280m RC",cost:"USD 358,400",roi:"63.1×"},
+  {n:4,id:"UP-ROUND-11-WK-AU-04",lat:22.726925,lon:44.977049,sc:0.631,pri:"MEDIUM",
+   sat:0.731,str:0.000,geo:1.000,geol:0.764,npv:"USD 113M",grade:"2.60 g/t Au",
+   ton:"2,160 kt",res:"181 oz",depth:"0–280m",holes:"4×280m RC",cost:"USD 358,400",roi:"63.1×"},
+  {n:5,id:"UP-ROUND-11-WK-AU-05",lat:22.681927,lon:44.931397,sc:0.630,pri:"MEDIUM",
+   sat:0.666,str:0.000,geo:1.000,geol:0.850,npv:"USD 151.7M",grade:"3.20 g/t Au",
+   ton:"1,530 kt",res:"158,700 oz",depth:"0–280m",holes:"4×280m RC",cost:"USD 358,400",roi:"63.0×"}
+];
+
+var heat=[
+[22.7273,44.9727,0.614],[22.7251,44.9758,0.700],[22.7272,44.9815,0.668],
+[22.7297,44.9765,0.650],[22.7200,44.9758,0.547],[22.7337,44.9768,0.602],
+[22.7252,44.9698,0.647],[22.7246,44.9756,0.601],[22.7228,44.9719,0.647],
+[22.7307,44.9731,0.648],[22.7297,44.9835,0.592],[22.7320,44.9828,0.577],
+[22.7306,44.9793,0.682],[22.7280,44.9776,0.636],[22.7283,44.9774,0.636],
+[22.7307,44.9715,0.681],[22.7235,44.9704,0.720],[22.7268,44.9767,0.493],
+[22.7285,44.9736,0.706],[22.7252,44.9723,0.683],[22.7299,44.9751,0.618],
+[22.7256,44.9751,0.692],[22.7297,44.9761,0.629],[22.7275,44.9724,0.713],
+[22.7288,44.9755,0.690],[22.7209,44.9704,0.654],[22.7235,44.9803,0.602],
+[22.7324,44.9815,0.638],[22.7277,44.9710,0.589],[22.7267,44.9771,0.598],
+[22.7308,44.9745,0.642],[22.7300,44.9758,0.627],[22.7268,44.9756,0.600],
+[22.7244,44.9802,0.716],[22.7348,44.9776,0.605],[22.7297,44.9719,0.632],
+[22.7207,44.9757,0.633],[22.7303,44.9753,0.524],[22.7301,44.9722,0.764],
+[22.7302,44.9762,0.604],[22.7254,44.9753,0.670],[22.7329,44.9808,0.526],
+[22.7240,44.9746,0.625],[22.7318,44.9772,0.551],[22.7282,44.9664,0.608],
+[22.7338,44.9687,0.696],[22.7254,44.9767,0.672],[22.7298,44.9759,0.664]
+];
+
+var minLat=22.675,maxLat=22.74,minLon=44.925,maxLon=44.99;
+var markerXY=[];
+
+function proj(lat,lon){
+  return [(lon-minLon)/(maxLon-minLon)*c.width, (1-(lat-minLat)/(maxLat-minLat))*c.height];
+}
+
+function draw(){
+  var w=c.width,h=c.height;ctx.clearRect(0,0,w,h);
+  ctx.fillStyle="#0D1520";ctx.fillRect(0,0,w,h);
+
+  // Grid
+  ctx.strokeStyle="rgba(0,195,255,0.05)";ctx.lineWidth=0.5;
+  for(var i=0;i<w;i+=50){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,h);ctx.stroke();}
+  for(var j=0;j<h;j+=50){ctx.beginPath();ctx.moveTo(0,j);ctx.lineTo(w,j);ctx.stroke();}
+
+  // Terrain texture
+  for(var tx=0;tx<w;tx+=4){for(var ty=0;ty<h;ty+=4){
+    ctx.fillStyle="rgba(20,40,60,"+Math.random()*0.07+")";ctx.fillRect(tx,ty,4,4);
+  }}
+
+  // Wadi lines
+  ctx.strokeStyle="rgba(80,60,40,0.12)";ctx.lineWidth=1.5;
+  for(var wi=0;wi<5;wi++){ctx.beginPath();var sx=Math.random()*w;ctx.moveTo(sx,0);
+    for(var s=0;s<15;s++){sx+=Math.random()*50-25;ctx.lineTo(sx,s*h/15);}ctx.stroke();}
+
+  // Heatmap
+  heat.forEach(function(p){
+    var xy=proj(p[0],p[1]);var r=p[2]*90;
+    var g=ctx.createRadialGradient(xy[0],xy[1],0,xy[0],xy[1],r);
+    var a=p[2]*0.45;
+    if(p[2]>0.7){g.addColorStop(0,"rgba(255,40,0,"+a+")");g.addColorStop(0.4,"rgba(255,140,0,"+(a*0.5)+")");}
+    else if(p[2]>0.6){g.addColorStop(0,"rgba(255,150,0,"+a+")");g.addColorStop(0.4,"rgba(255,200,0,"+(a*0.4)+")");}
+    else{g.addColorStop(0,"rgba(255,200,0,"+(a*0.7)+")");g.addColorStop(0.4,"rgba(200,220,0,"+(a*0.3)+")");}
+    g.addColorStop(1,"rgba(0,0,0,0)");ctx.fillStyle=g;ctx.fillRect(xy[0]-r,xy[1]-r,r*2,r*2);
+  });
+
+  // Markers
+  markerXY=[];
+  T.forEach(function(t,i){
+    var xy=proj(t.lat,t.lon);markerXY.push({x:xy[0],y:xy[1],idx:i});
+    // Glow ring
+    var gl=ctx.createRadialGradient(xy[0],xy[1],0,xy[0],xy[1],30);
+    gl.addColorStop(0,"rgba(0,195,255,0.25)");gl.addColorStop(1,"rgba(0,195,255,0)");
+    ctx.fillStyle=gl;ctx.beginPath();ctx.arc(xy[0],xy[1],30,0,Math.PI*2);ctx.fill();
+    // Marker circle
+    ctx.beginPath();ctx.arc(xy[0],xy[1],14,0,Math.PI*2);
+    ctx.fillStyle="#EF9F27";ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=2.5;ctx.stroke();
+    // Number
+    ctx.fillStyle="#fff";ctx.font="bold 12px Rajdhani,sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";
+    ctx.fillText(String(t.n),xy[0],xy[1]+1);
+    // ID label
+    ctx.font="bold 9px Rajdhani,sans-serif";ctx.fillStyle="#00C3FF";ctx.fillText(t.id.split("-").pop(),xy[0],xy[1]-22);
+    ctx.fillStyle="#8899BB";ctx.font="8px sans-serif";ctx.fillText(t.sc.toFixed(3),xy[0],xy[1]+24);
+  });
+
+  // Watermark
+  ctx.fillStyle="rgba(0,195,255,0.1)";ctx.font="bold 10px Rajdhani,sans-serif";
+  ctx.textAlign="left";ctx.textBaseline="top";ctx.fillText("WADI KHAYYAM · ARABIAN SHIELD",8,8);
+  ctx.fillStyle="rgba(136,153,187,0.35)";ctx.font="7px sans-serif";
+  ctx.textAlign="left";ctx.fillText("44.93°E",4,h-6);
+  ctx.textAlign="right";ctx.fillText("44.99°E",w-4,h-6);
+  ctx.textAlign="left";ctx.textBaseline="top";ctx.fillText("22.74°N",4,2);
+}
+
+function resize(){c.width=wrap.clientWidth;c.height=wrap.clientHeight;draw();}
+window.addEventListener("resize",resize);setTimeout(resize,120);
+
+// Click handler
+c.addEventListener("click",function(e){
+  var rect=c.getBoundingClientRect();
+  var mx=e.clientX-rect.left,my=e.clientY-rect.top;
+  // Scale for CSS vs canvas pixels
+  var sx=c.width/rect.width, sy=c.height/rect.height;
+  mx*=sx; my*=sy;
+  var hit=-1,bestD=999;
+  markerXY.forEach(function(m){
+    var d=Math.sqrt((mx-m.x)*(mx-m.x)+(my-m.y)*(my-m.y));
+    if(d<30 && d<bestD){bestD=d;hit=m.idx;}
+  });
+  if(hit>=0){
+    var t=T[hit];
+    document.getElementById("wkPopId").textContent=t.id;
+    document.getElementById("wkPopPri").textContent="Au target | "+t.pri+" priority";
+    document.getElementById("wkPopScore").textContent=t.sc.toFixed(3);
+    var rows="";
+    function row(l,v,c){return "<tr><td style=\"color:#8899BB;padding:3px 0;font-size:10px\">"+l+"</td><td style=\"text-align:right;color:"+(c||"#fff")+";font-size:10px;font-weight:600\">"+v+"</td></tr>";}
+    rows+=row("Coordinates",t.lat.toFixed(6)+"°N, "+t.lon.toFixed(6)+"°E");
+    rows+="<tr><td colspan=2 style=\"padding:4px 0 2px;color:#00C3FF;font-weight:700;font-size:9px;letter-spacing:1px;border-top:1px solid rgba(255,255,255,.06)\">QASSAS ANALYSIS</td></tr>";
+    rows+=row("Satellite",t.sat.toFixed(3));rows+=row("Structural",t.str.toFixed(3));
+    rows+=row("Geochemical",t.geo.toFixed(3));rows+=row("Geological",t.geol.toFixed(3));
+    rows+="<tr><td colspan=2 style=\"padding:4px 0 2px;color:#EF9F27;font-weight:700;font-size:9px;letter-spacing:1px;border-top:1px solid rgba(255,255,255,.06)\">MINERAL ESTIMATE</td></tr>";
+    rows+=row("Grade",t.grade);rows+=row("Tonnage",t.ton);rows+=row("Resource",t.res,"#D4A843");
+    rows+="<tr><td colspan=2 style=\"padding:4px 0 2px;color:#1D9E75;font-weight:700;font-size:9px;letter-spacing:1px;border-top:1px solid rgba(255,255,255,.06)\">ECONOMICS</td></tr>";
+    rows+=row("NPV",t.npv,"#1D9E75");rows+=row("ROI",t.roi);rows+=row("Drill cost",t.cost);
+    rows+=row("Programme",t.holes);
+    document.getElementById("wkPopTable").innerHTML=rows;
+    // Position popup near click
+    var px=(e.clientX-rect.left),py=(e.clientY-rect.top);
+    if(px>rect.width/2)px-=270;else px+=20;
+    if(py>rect.height-200)py-=200;
+    popup.style.left=Math.max(4,px)+"px";popup.style.top=Math.max(4,py)+"px";
+    popup.style.display="block";
+  } else {
+    popup.style.display="none";
+  }
+});
+
+})();
+</script>
+</div>
+      <!-- Bottom gradient fade -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(transparent,rgba(6,10,18,.6));pointer-events:none;z-index:5"></div>
+    </div>
+  </div>
+  <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SLIDE 15 — SGS PARTNERSHIP OPPORTUNITY
+     ══════════════════════════════════════════════ -->
+<div class="slide" id="s15">
+  <div class="gbar"></div>
+  <div class="bg-grid" style="opacity:.2"></div>
+  <div class="orb" style="width:500px;height:500px;right:-100px;top:-80px;background:radial-gradient(circle,rgba(123,47,255,.2) 0%,transparent 70%);animation:orbPulse 7s ease-in-out infinite"></div>
+  <div class="orb" style="width:400px;height:400px;left:-80px;bottom:-60px;background:radial-gradient(circle,rgba(0,195,255,.12) 0%,transparent 70%);animation:orbPulse 9s ease-in-out infinite 2s"></div>
+  <div class="shead"><div class="logo">ZYN<span class="g">TRA</span></div><div class="slabel" id="s15-label">16 / SGS Partnership</div></div>
+  <div style="flex:1;padding:10px 48px 16px;display:grid;grid-template-columns:1fr 1fr;gap:18px;overflow:hidden">
+    <!-- LEFT: Content -->
+    <div class="stagger" style="display:flex;flex-direction:column;gap:10px">
+      <div>
+        <div class="big-h" style="font-size:27px" id="s15-title">QASSAS Development &amp;<br><span class="grad-text">SGS Partnership Opportunity</span></div>
+        <div class="sub-h" style="font-size:11px;margin-top:5px;line-height:1.65" id="s15-sub">QASSAS was developed using multi-source Saudi geological data, including satellite imagery analysis, structural fault mapping, and geochemical pattern recognition. The platform is designed to integrate with the Saudi Geological Survey's comprehensive geological database.</div>
+      </div>
+      <!-- Strategic partnership callout -->
+      <div style="padding:12px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(123,47,255,.08),rgba(0,195,255,.06));border:1px solid rgba(123,47,255,.25);position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--cyan))"></div>
+        <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:2px;color:var(--purple);text-transform:uppercase;margin-bottom:6px" id="s15-strat">Strategic Partnership Opportunity</div>
+        <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);line-height:1.65" id="s15-stratdesc">Full access to SGS's complete <b style="color:var(--white)">50-year archive</b> would enable QASSAS to achieve <b style="color:var(--cyan)">unprecedented accuracy</b> in mineral discovery across the Arabian Shield. This archive represents the <b style="color:var(--purple)">richest geological training resource</b> in the Middle East.</div>
+      </div>
+      <!-- Data Table -->
+      <div style="display:flex;flex-direction:column;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)">
+        <!-- Header -->
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;background:linear-gradient(90deg,rgba(123,47,255,.15),rgba(123,47,255,.05));padding:8px 14px;border-bottom:1px solid rgba(123,47,255,.2)">
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--purple);text-transform:uppercase" id="s15-th1">SGS Database Component</div>
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--purple);text-transform:uppercase;text-align:right" id="s15-th2">Potential Training Value</div>
+        </div>
+        <!-- Row 1: Drill Holes -->
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;padding:9px 14px;background:rgba(123,47,255,.06);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:7px;height:7px;border-radius:50%;background:var(--purple);box-shadow:0 0 8px var(--purple)"></div><div style="font-family:var(--fb);font-size:11px;font-weight:700;color:var(--white)" id="s15-r1l">Historical Drill Holes</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s15-r1v"><b style="color:var(--cyan)">5,000+</b> drill records — depth and grade calibration</div>
+        </div>
+        <!-- Row 2: Mineral Occurrences -->
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;padding:9px 14px;background:rgba(13,24,40,.5);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--cyan)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s15-r2l">Known Mineral Occurrences</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s15-r2v"><b style="color:var(--cyan)">3,000+</b> documented sites — training labels for AI</div>
+        </div>
+        <!-- Row 3: Geochemical -->
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;padding:9px 14px;background:rgba(123,47,255,.04);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--gold)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s15-r3l">Geochemical Database</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s15-r3v"><b style="color:var(--cyan)">200,000+</b> soil/rock analyses — pathfinder patterns</div>
+        </div>
+        <!-- Row 4: Geological Maps -->
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;padding:9px 14px;background:rgba(13,24,40,.5);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--blue)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s15-r4l">Geological Maps</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s15-r4v">Complete Arabian Shield — lithology &amp; structural data</div>
+        </div>
+        <!-- Row 5: Geophysical -->
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;padding:9px 14px;background:rgba(123,47,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--magenta)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s15-r5l">Geophysical Surveys</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s15-r5v">Aeromagnetic &amp; radiometric — hydrothermal signatures</div>
+        </div>
+      </div>
+      <!-- Closing statement -->
+      <div style="padding:10px 14px;border-radius:10px;background:rgba(0,195,255,.04);border:1px solid rgba(0,195,255,.15)">
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.65" id="s15-closing">This strategic partnership would position QASSAS as the <b style="color:var(--cyan)">most accurate mineral discovery AI</b> in the region, trained exclusively on <b style="color:var(--white)">Saudi geological signatures</b> accumulated over <b style="color:var(--purple)">five decades</b> of systematic exploration.</div>
+      </div>
+    </div>
+    <!-- RIGHT: Visual — SGS Data Ecosystem -->
+    <div style="display:flex;align-items:center;justify-content:center;position:relative">
+      <canvas id="sgsCanvas" style="width:100%;height:100%;display:block"></canvas>
+    </div>
+  </div>
+  <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SLIDE 16 — NEO SPACE GROUP PARTNERSHIP
+     ══════════════════════════════════════════════ -->
+<div class="slide" id="s16">
+  <div class="gbar"></div>
+  <div class="bg-grid" style="opacity:.2"></div>
+  <div class="orb" style="width:520px;height:520px;left:-100px;top:-100px;background:radial-gradient(circle,rgba(0,195,255,.2) 0%,transparent 70%);animation:orbPulse 6s ease-in-out infinite"></div>
+  <div class="orb" style="width:400px;height:400px;right:-80px;bottom:-80px;background:radial-gradient(circle,rgba(212,168,67,.15) 0%,transparent 70%);animation:orbPulse 8s ease-in-out infinite 2s"></div>
+  <div class="shead"><div class="logo">ZYN<span class="g">TRA</span></div><div class="slabel gold" id="s16-label">17 / Neo Space Group</div></div>
+  <div style="flex:1;padding:10px 48px 16px;display:grid;grid-template-columns:1fr 1fr;gap:18px;overflow:hidden">
+    <!-- LEFT: Content -->
+    <div class="stagger" style="display:flex;flex-direction:column;gap:10px">
+      <div>
+        <div class="big-h" style="font-size:27px" id="s16-title">Neo Space Group<br><span class="gold-text">Partnership — Unlocking the Unseen</span></div>
+        <div class="sub-h" style="font-size:11px;margin-top:5px;line-height:1.65" id="s16-sub">QASSAS has proven its capability on available SGS data covering explored areas of the Arabian Shield. However, <b style="color:var(--white)">vast unexplored territories</b> remain that lack ground-based geological surveys.</div>
+      </div>
+      <!-- NSG intro callout -->
+      <div style="padding:12px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(0,195,255,.08),rgba(212,168,67,.06));border:1px solid rgba(0,195,255,.25);position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--gold))"></div>
+        <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);line-height:1.65" id="s16-intro"><b style="color:var(--cyan)">Neo Space Group (NSG)</b> — a <b style="color:var(--gold)">PIF-owned</b> Saudi satellite company — operates high-resolution satellites with <b style="color:var(--white)">50cm ground resolution</b>. A strategic partnership between QASSAS and NSG would unlock:</div>
+      </div>
+      <!-- Capabilities Table -->
+      <div style="display:flex;flex-direction:column;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)">
+        <div style="display:grid;grid-template-columns:.8fr 1.2fr;background:linear-gradient(90deg,rgba(0,195,255,.15),rgba(0,195,255,.05));padding:8px 14px;border-bottom:1px solid rgba(0,195,255,.2)">
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--cyan);text-transform:uppercase" id="s16-th1">Capability</div>
+          <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--cyan);text-transform:uppercase;text-align:right" id="s16-th2">Impact</div>
+        </div>
+        <!-- Unexplored Areas -->
+        <div style="display:grid;grid-template-columns:.8fr 1.2fr;padding:10px 14px;background:rgba(212,168,67,.06);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)"></div><div style="font-family:var(--fb);font-size:11px;font-weight:700;color:var(--white)" id="s16-r1l">Unexplored Areas</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s16-r1v">Target areas with <b style="color:var(--gold)">ZERO</b> historical data — NSG provides imagery where ground surveys never reached</div>
+        </div>
+        <!-- 50cm Resolution -->
+        <div style="display:grid;grid-template-columns:.8fr 1.2fr;padding:10px 14px;background:rgba(13,24,40,.5);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--cyan)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s16-r2l">50cm Resolution</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s16-r2v"><b style="color:var(--cyan)">10×</b> better than free satellites — detect alteration zones as small as 5 meters</div>
+        </div>
+        <!-- Nationwide Coverage -->
+        <div style="display:grid;grid-template-columns:.8fr 1.2fr;padding:10px 14px;background:rgba(0,195,255,.04);border-bottom:1px solid rgba(255,255,255,.04)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--purple)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s16-r3l">Nationwide Coverage</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s16-r3v">Scan the entire Arabian Shield (<b style="color:var(--white)">650,000 km²</b>) in months, not decades</div>
+        </div>
+        <!-- Saudi Sovereignty -->
+        <div style="display:grid;grid-template-columns:.8fr 1.2fr;padding:10px 14px;background:rgba(13,24,40,.5)">
+          <div style="display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--gold)"></div><div style="font-family:var(--fb);font-size:11px;color:var(--lgray)" id="s16-r4l">Saudi Sovereignty</div></div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);text-align:right" id="s16-r4v"><b style="color:var(--gold)">100% Saudi</b> tech stack: NSG + QASSAS + SGS — no foreign dependency</div>
+        </div>
+      </div>
+      <!-- Strategic Vision -->
+      <div style="padding:12px 16px;border-radius:12px;background:rgba(212,168,67,.06);border:1px solid rgba(212,168,67,.2);position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--cyan),var(--purple))"></div>
+        <div style="font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:5px" id="s16-vislabel">Strategic Vision</div>
+        <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);line-height:1.65" id="s16-vision"><b style="color:var(--purple)">SGS</b> provides the geological database <b style="color:var(--lgray)">(the brain)</b>, <b style="color:var(--cyan)">NSG</b> provides the satellite imagery <b style="color:var(--lgray)">(the eyes)</b>, and <b style="color:var(--gold)">QASSAS</b> provides the AI intelligence. Together, this <b style="color:var(--white)">Saudi-owned ecosystem</b> can unlock billions of dollars in undiscovered mineral resources across the Kingdom.</div>
+      </div>
+      <!-- 3 pillars strip -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <div class="card card3d" style="padding:10px 8px;text-align:center;border-top:2px solid var(--purple)">
+          <div style="font-size:18px;margin-bottom:3px">🧠</div>
+          <div style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--purple)" id="s16-p1">SGS</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray)" id="s16-p1s">The Brain</div>
+        </div>
+        <div class="card card3d" style="padding:10px 8px;text-align:center;border-top:2px solid var(--cyan)">
+          <div style="font-size:18px;margin-bottom:3px">👁️</div>
+          <div style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--cyan)" id="s16-p2">NSG</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray)" id="s16-p2s">The Eyes</div>
+        </div>
+        <div class="card card3d" style="padding:10px 8px;text-align:center;border-top:2px solid var(--gold)">
+          <div style="font-size:18px;margin-bottom:3px">⚡</div>
+          <div style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--gold)" id="s16-p3">QASSAS</div>
+          <div style="font-family:var(--fb);font-size:9px;color:var(--gray)" id="s16-p3s">The Intelligence</div>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT: Animated orbital visualization -->
+    <div style="display:flex;align-items:center;justify-content:center;position:relative">
+      <canvas id="nsgCanvas" style="width:100%;height:100%;display:block"></canvas>
+    </div>
+  </div>
+  <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SLIDE 17 — STRATEGIC VALUE OF QASSAS
+     ══════════════════════════════════════════════ -->
+<div class="slide" id="s17">
+  <div class="gbar"></div>
+  <div class="bg-grid" style="opacity:.18"></div>
+  <div class="orb" style="width:480px;height:480px;right:-100px;top:-60px;background:radial-gradient(circle,rgba(212,168,67,.18) 0%,transparent 70%);animation:orbPulse 7s ease-in-out infinite"></div>
+  <div class="orb" style="width:380px;height:380px;left:-80px;bottom:-80px;background:radial-gradient(circle,rgba(0,195,255,.12) 0%,transparent 70%);animation:orbPulse 9s ease-in-out infinite 2s"></div>
+  <div class="shead"><div class="logo">ZYN<span class="g">TRA</span></div><div class="slabel gold" id="s17-label">18 / Strategic Value</div></div>
+  <div style="flex:1;padding:8px 48px 14px;display:grid;grid-template-columns:1fr 1fr;gap:16px;overflow:hidden">
+    <!-- LEFT: 3 Pillars -->
+    <div class="stagger" style="display:flex;flex-direction:column;gap:8px">
+      <div>
+        <div class="big-h" style="font-size:26px" id="s17-title">The Strategic Value of<br><span class="gold-text">QASSAS — National Sovereignty</span></div>
+        <div class="sub-h" style="font-size:10.5px;margin-top:4px;line-height:1.6" id="s17-sub">The strategic value lies in establishing a comprehensive national system for technological sovereignty in mineral exploration, based on three main pillars:</div>
+      </div>
+      <!-- Pillar 1: SGS -->
+      <div class="card card3d" style="padding:12px 14px;display:flex;gap:12px;border-left:3px solid var(--purple)">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;min-width:40px">
+          <div style="font-size:20px">🧠</div>
+          <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--purple);opacity:.3">01</div>
+        </div>
+        <div>
+          <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--purple);margin-bottom:3px" id="s17-p1h">Saudi Geological Survey (SGS)</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s17-p1b">The national geological knowledge source, providing data and expertise to analyze geological profiles, build training models, and prioritize drilling and exploration for various minerals.</div>
+        </div>
+      </div>
+      <!-- Pillar 2: NSG -->
+      <div class="card card3d" style="padding:12px 14px;display:flex;gap:12px;border-left:3px solid var(--cyan)">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;min-width:40px">
+          <div style="font-size:20px">👁️</div>
+          <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--cyan);opacity:.3">02</div>
+        </div>
+        <div>
+          <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:3px" id="s17-p2h">Neo Space Group (NSG)</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s17-p2b">National satellites providing high-resolution imagery of previously unexplored areas, detecting surface indicators and identifying priority exploration sites.</div>
+        </div>
+      </div>
+      <!-- Pillar 3: QASSAS -->
+      <div class="card card3d" style="padding:12px 14px;display:flex;gap:12px;border-left:3px solid var(--gold)">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;min-width:40px">
+          <div style="font-size:20px">⚡</div>
+          <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--gold);opacity:.3">03</div>
+        </div>
+        <div>
+          <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--gold);margin-bottom:3px" id="s17-p3h">QASSAS Platform</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s17-p3b">The national sovereign AI engine — analyzing multi-source data, integrating geological, geophysical, geochemical, and remote sensing indicators, generating intelligent recommendations for discovery opportunities.</div>
+        </div>
+      </div>
+      <!-- Equation strip -->
+      <div style="padding:10px 14px;border-radius:10px;background:linear-gradient(135deg,rgba(212,168,67,.08),rgba(123,47,255,.06));border:1px solid rgba(212,168,67,.2);display:flex;align-items:center;justify-content:center;gap:14px">
+        <div style="text-align:center"><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--purple)">SGS</div><div style="font-family:var(--fb);font-size:8px;color:var(--gray);letter-spacing:1px" id="s17-eq1">Knowledge</div></div>
+        <div style="font-family:var(--fh);font-size:18px;color:var(--gray)">+</div>
+        <div style="text-align:center"><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--cyan)">NSG</div><div style="font-family:var(--fb);font-size:8px;color:var(--gray);letter-spacing:1px" id="s17-eq2">Space Eye</div></div>
+        <div style="font-family:var(--fh);font-size:18px;color:var(--gray)">+</div>
+        <div style="text-align:center"><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--gold)">QASSAS</div><div style="font-family:var(--fb);font-size:8px;color:var(--gray);letter-spacing:1px" id="s17-eq3">Intelligence</div></div>
+        <div style="font-family:var(--fh);font-size:18px;color:var(--gold)">=</div>
+        <div style="text-align:center"><div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--white);letter-spacing:1px" id="s17-eqr">Saudi Sovereignty</div><div style="font-size:12px">🇸🇦</div></div>
+      </div>
+    </div>
+    <!-- RIGHT: Vision 2030 contributions -->
+    <div class="stagger" style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase" id="s17-contlabel">Direct Contributions to Vision 2030</div>
+      <!-- Contribution items -->
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.06);transition:all .3s" onmouseover="this.style.borderColor='rgba(212,168,67,.35)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">📈</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c1"><b style="color:var(--white)">Accelerating Vision 2030 goals</b> — increase the mining sector's contribution to GDP</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.06);transition:all .3s" onmouseover="this.style.borderColor='rgba(0,195,255,.35)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(0,195,255,.1);border:1px solid rgba(0,195,255,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🤖</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c2"><b style="color:var(--white)">Localizing deep AI technologies</b> — in the mining and exploration sector</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.06);transition:all .3s" onmouseover="this.style.borderColor='rgba(123,47,255,.35)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(123,47,255,.1);border:1px solid rgba(123,47,255,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">💰</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c3"><b style="color:var(--white)">Developing non-oil revenues</b> — enhancing economic diversification</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.06);transition:all .3s" onmouseover="this.style.borderColor='rgba(192,64,232,.35)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(192,64,232,.1);border:1px solid rgba(192,64,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🛡️</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c4"><b style="color:var(--white)">Reducing foreign dependency</b> — eliminating reliance on foreign solutions in strategic sectors</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.06);transition:all .3s" onmouseover="this.style.borderColor='rgba(30,111,255,.35)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(30,111,255,.1);border:1px solid rgba(30,111,255,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">⛏️</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c5"><b style="color:var(--white)">Accelerating exploration</b> — historically underserved areas with improved drilling efficiency</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.06);transition:all .3s" onmouseover="this.style.borderColor='rgba(212,168,67,.35)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🏆</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c6"><b style="color:var(--white)">Enhancing mining investment</b> — improving data quality and forecasting accuracy</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-radius:10px;background:rgba(212,168,67,.06);border:1px solid rgba(212,168,67,.2);transition:all .3s" onmouseover="this.style.borderColor='rgba(212,168,67,.5)';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(212,168,67,.2)';this.style.transform=''">
+        <div style="width:28px;height:28px;border-radius:8px;background:rgba(212,168,67,.15);border:1px solid rgba(212,168,67,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🇸🇦</div>
+        <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.55" id="s17-c7"><b style="color:var(--gold)">Building a national sovereign system</b> — comprehensive smart exploration technologies owned by the Kingdom</div>
+      </div>
+    </div>
+  </div>
+  <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
      SLIDE 12 — TEAM
      ══════════════════════════════════════════════ -->
 <div class="slide" id="s12">
   <div class="gbar"></div>
-  <div class="shead"><div class="logo">ZYN<span class="g">TRA</span></div><div class="slabel">15 / The Founders</div></div>
+  <div class="shead"><div class="logo">ZYN<span class="g">TRA</span></div><div class="slabel">19 / The Founders</div></div>
   <div style="flex:1;padding:14px 48px 18px;display:flex;flex-direction:column;gap:12px;overflow:hidden">
     <div class="stagger" style="display:contents">
       <!-- intro -->
@@ -2768,7 +3528,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
             </div>
             <div>
               <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);margin-bottom:2px">Mohammed Nabil</div>
-              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(0,195,255,.1);border:1px solid rgba(0,195,255,.3);color:var(--cyan);text-transform:uppercase">Founder &amp; CEO</div>
+              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(0,195,255,.1);border:1px solid rgba(0,195,255,.3);color:var(--cyan);text-transform:uppercase">Co-Founder</div>
               <div style="font-family:var(--fb);font-size:11px;color:var(--gray);margin-top:4px">📍 Riyadh, Saudi Arabia</div>
             </div>
           </div>
@@ -2796,7 +3556,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
             </div>
             <div>
               <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);margin-bottom:2px">Mohammed Noury</div>
-              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(123,47,255,.1);border:1px solid rgba(123,47,255,.3);color:var(--purple);text-transform:uppercase">Co-Founder &amp; CTO</div>
+              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(123,47,255,.1);border:1px solid rgba(123,47,255,.3);color:var(--purple);text-transform:uppercase">Co-Founder</div>
               <div style="font-family:var(--fb);font-size:11px;color:var(--gray);margin-top:4px">📍 Riyadh, Saudi Arabia</div>
             </div>
           </div>
@@ -2839,26 +3599,58 @@ setTimeout(()=&gt;{ resize(); }, 100);
      ══════════════════════════════════════════════ -->
 <div class="slide" id="s13">
   <div class="gbar"></div>
-  <div class="bg-grid"></div>
+  <div class="bg-grid" style="opacity:.15"></div>
   <div class="orb orb1" style="width:500px;height:500px;right:-80px;top:-60px;background:radial-gradient(circle,rgba(123,47,255,.25) 0%,transparent 70%);animation:orbPulse 6s ease-in-out infinite"></div>
   <div class="orb orb2" style="width:360px;height:360px;left:-60px;bottom:-50px;background:radial-gradient(circle,rgba(0,195,255,.15) 0%,transparent 70%);animation:orbPulse 8s ease-in-out infinite 2s"></div>
   <div class="shead" style="position:relative;z-index:5">
     <div class="logo">ZYN<span class="g">TRA</span></div>
-    <div style="font-family:var(--fb);font-size:10px;letter-spacing:3px;color:var(--gray)">Q1 2025 · CONFIDENTIAL</div>
+    <div style="font-family:var(--fb);font-size:10px;letter-spacing:3px;color:var(--gray)">Q1 2026 · CONFIDENTIAL</div>
   </div>
-  <div class="center stagger" style="position:relative;z-index:2">
-    <div class="big-title">ZYNTRA</div>
-    <div style="font-family:var(--fb);font-size:16px;letter-spacing:3px;color:var(--lgray)">Powering Saudi Arabia's AI Future — From Data to Action</div>
-    <div class="cta-box">
-      <div style="font-family:var(--fh);font-size:22px;font-weight:700;color:var(--white);margin-bottom:8px">Series A Funding Round &nbsp;·&nbsp; $15M Target &nbsp;·&nbsp; Seeking Strategic &amp; Government Partners</div>
-      <div style="font-family:var(--fb);font-size:12px;color:var(--cyan);letter-spacing:2px">DEEP TECHNOLOGY &nbsp;·&nbsp; VISION 2030 ALIGNED &nbsp;·&nbsp; SAUDI-FOUNDED &nbsp;·&nbsp; SERIES A OPEN</div>
-      <div style="font-family:var(--fb);font-size:12px;color:var(--lgray);margin-top:6px">contact@zyntra.ai &nbsp;·&nbsp; www.zyntra.ai &nbsp;·&nbsp; Riyadh, Saudi Arabia &nbsp;·&nbsp; linkedin.com/company/zyntra-ai</div>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;z-index:5;padding:0 48px">
+    <!-- ZYNTRA title -->
+    <div class="big-title" style="font-size:clamp(48px,7vw,80px);animation:glowPulse 4s ease-in-out infinite">ZYNTRA</div>
+    <div style="font-family:var(--fb);font-size:14px;letter-spacing:3px;color:var(--lgray)" id="s13-tagline">Powering Saudi Arabia's AI Future — From Data to Action</div>
+
+    <!-- 4 Asks Box -->
+    <div style="width:100%;max-width:900px;border:1px solid rgba(212,168,67,.3);background:rgba(13,24,40,.92);border-radius:14px;padding:18px 24px;position:relative;overflow:hidden;backdrop-filter:blur(12px)">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--cyan) 50%,var(--purple))"></div>
+      <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;text-align:center" id="s13-askh">Our Request</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(212,168,67,.05);border:1px solid rgba(212,168,67,.15)">
+          <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--gold);opacity:.4;flex-shrink:0;line-height:1">01</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s13-ask1"><b style="color:var(--white)">Adopting the platform</b> as a national innovation supporting the mining and mineral resources sector.</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(0,195,255,.04);border:1px solid rgba(0,195,255,.12)">
+          <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--cyan);opacity:.4;flex-shrink:0;line-height:1">02</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s13-ask2"><b style="color:var(--white)">Letter of Support &amp; Endorsement</b> to relevant entities to expedite entrepreneurial licensing and investment empowerment for ZYNTRA.</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(123,47,255,.04);border:1px solid rgba(123,47,255,.12)">
+          <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--purple);opacity:.4;flex-shrink:0;line-height:1">03</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s13-ask3"><b style="color:var(--white)">Institutional Partnerships</b> with relevant entities to expand QASSAS application scope across the Arabian Shield region.</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(212,168,67,.05);border:1px solid rgba(212,168,67,.15)">
+          <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--gold);opacity:.4;flex-shrink:0;line-height:1">04</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--lgray);line-height:1.6" id="s13-ask4"><b style="color:var(--white)">Future integration</b> with Saudi Geological Survey (SGS) and Neo Space Group (NSG) within a sovereign national framework.</div>
+        </div>
+      </div>
     </div>
-    <div style="display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
+
+    <!-- Commitment paragraph -->
+    <div style="width:100%;max-width:900px;padding:12px 20px;border-radius:10px;background:rgba(0,195,255,.04);border:1px solid rgba(0,195,255,.12);text-align:center">
+      <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);line-height:1.7" id="s13-commit">We reaffirm our full commitment to harness this technology to <b style="color:var(--white)">serve the nation</b>, enhance the Kingdom's position as a <b style="color:var(--cyan)">global hub for industrial AI and deep technologies</b>, and contribute to achieving the goals of <b style="color:var(--gold)">Vision 2030</b> in the mining sector.</div>
+    </div>
+
+    <!-- CTA box -->
+    <div class="cta-box" style="width:100%;max-width:900px">
+      <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--white);margin-bottom:6px" id="s13-ctah">Series A Funding Round &nbsp;·&nbsp; $15M Target &nbsp;·&nbsp; Seeking Strategic &amp; Government Partners</div>
+      <div style="font-family:var(--fb);font-size:11px;color:var(--cyan);letter-spacing:2px" id="s13-ctas">DEEP TECHNOLOGY &nbsp;·&nbsp; VISION 2030 ALIGNED &nbsp;·&nbsp; SAUDI-FOUNDED &nbsp;·&nbsp; SERIES A OPEN</div>
+      <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:5px" id="s13-ctac">contact@zyntra.com.sa &nbsp;·&nbsp; www.zyntra.com.sa &nbsp;·&nbsp; Riyadh, Saudi Arabia</div>
+    </div>
+
+    <!-- Badges -->
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
       <div class="cbadge" style="--bc:var(--gold)">Vision 2030 Aligned</div>
       <div class="cbadge" style="--bc:var(--cyan)">Saudi-Founded</div>
-      <div class="cbadge" style="--bc:var(--purple)"><span class="count-num" data-target="12" data-suffix=" Pending Patents" data-dur="1200">12 Pending Patents</span></div>
-      <div class="cbadge" style="--bc:var(--magenta)"><span class="count-num" data-target="0.87" data-prefix="AUC-ROC " data-dec="2" data-dur="1600">AUC-ROC 0.87</span></div>
     </div>
   </div>
   <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
@@ -2870,15 +3662,15 @@ setTimeout(()=&gt;{ resize(); }, 100);
 <div id="nav">
   <button id="prev">&#9664;</button>
   <div id="dots"></div>
-  <div id="snum">01 / 13</div>
+  <div id="snum">01 / 20</div>
   <button id="next">&#9654;</button>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ══════════════════════════════════════════════════════
 // NAVIGATION
 // ══════════════════════════════════════════════════════
-var cur=0, tot=16;
+var cur=0, tot=20;
 var slides=document.querySelectorAll('.slide');
 var dotsEl=document.getElementById('dots');
 var snumEl=document.getElementById('snum');
@@ -5642,6 +6434,227 @@ function setupCanvas(id){
   draw();
 })();
 
+// ══════════════════════════════════════════════════════════════
+// SGS PARTNERSHIP CANVAS — Data ecosystem visualization
+// ══════════════════════════════════════════════════════════════
+(function(){
+  var cv=document.getElementById('sgsCanvas');
+  if(!cv) return;
+  var par=cv.parentElement;
+  function resize(){cv.width=par.offsetWidth||400;cv.height=par.offsetHeight||500;}
+  resize();
+  var ctx=cv.getContext('2d');
+  var t=0;
+
+  var nodes=[
+    {label:'SGS\n50-Year\nArchive',x:.5,y:.5,r:50,color:'#7B2FFF',glow:'rgba(123,47,255,.3)'},
+    {label:'5,000+\nDrill Holes',x:.2,y:.18,r:28,color:'#00C3FF',glow:'rgba(0,195,255,.2)'},
+    {label:'3,000+\nMineral Sites',x:.8,y:.15,r:28,color:'#1D9E75',glow:'rgba(29,158,117,.2)'},
+    {label:'200K+\nGeochem',x:.15,y:.55,r:26,color:'#D4A843',glow:'rgba(212,168,67,.2)'},
+    {label:'Geological\nMaps',x:.85,y:.5,r:26,color:'#1E6FFF',glow:'rgba(30,111,255,.2)'},
+    {label:'Geophysical\nSurveys',x:.25,y:.85,r:26,color:'#C040E8',glow:'rgba(192,64,232,.2)'},
+    {label:'QASSAS\nAI Engine',x:.75,y:.82,r:34,color:'#00C3FF',glow:'rgba(0,195,255,.3)'},
+  ];
+
+  function draw(){
+    t+=0.015;
+    var w=cv.width,h=cv.height;
+    ctx.clearRect(0,0,w,h);
+
+    // Background
+    ctx.fillStyle='rgba(10,14,26,0.95)';
+    ctx.fillRect(0,0,w,h);
+
+    // Grid
+    ctx.strokeStyle='rgba(0,195,255,0.03)';ctx.lineWidth=0.5;
+    for(var i=0;i<w;i+=40){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,h);ctx.stroke();}
+    for(var j=0;j<h;j+=40){ctx.beginPath();ctx.moveTo(0,j);ctx.lineTo(w,j);ctx.stroke();}
+
+    // Draw connections from each outer node to SGS center
+    var cx=nodes[0].x*w, cy=nodes[0].y*h;
+    for(var i=1;i<nodes.length;i++){
+      var nx=nodes[i].x*w, ny=nodes[i].y*h;
+      // Animated data flow particles along the connection
+      ctx.strokeStyle='rgba(255,255,255,0.06)';
+      ctx.lineWidth=1;ctx.setLineDash([4,6]);ctx.lineDashOffset=-t*60;
+      ctx.beginPath();ctx.moveTo(nx,ny);ctx.lineTo(cx,cy);ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Flowing dot
+      var prog=(t*0.3+i*0.15)%1;
+      var px=nx+(cx-nx)*prog, py=ny+(cy-ny)*prog;
+      ctx.beginPath();ctx.arc(px,py,3,0,Math.PI*2);
+      ctx.fillStyle=nodes[i].color;ctx.globalAlpha=0.7;ctx.fill();ctx.globalAlpha=1;
+    }
+
+    // Connection from SGS to QASSAS (special thick)
+    var qx=nodes[6].x*w, qy=nodes[6].y*h;
+    ctx.strokeStyle='rgba(0,195,255,0.12)';ctx.lineWidth=2;
+    ctx.setLineDash([8,4]);ctx.lineDashOffset=-t*80;
+    ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(qx,qy);ctx.stroke();
+    ctx.setLineDash([]);
+    // Arrow flow
+    var ap=(t*0.4)%1;
+    var ax=cx+(qx-cx)*ap,ay=cy+(qy-cy)*ap;
+    ctx.beginPath();ctx.arc(ax,ay,5,0,Math.PI*2);
+    ctx.fillStyle='#00C3FF';ctx.globalAlpha=0.8;ctx.fill();ctx.globalAlpha=1;
+
+    // Draw nodes
+    nodes.forEach(function(n,i){
+      var x=n.x*w, y=n.y*h;
+      var bob=Math.sin(t*2+i*1.2)*4;
+      y+=bob;
+
+      // Outer glow
+      var g=ctx.createRadialGradient(x,y,0,x,y,n.r*2);
+      g.addColorStop(0,n.glow);g.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,n.r*2,0,Math.PI*2);ctx.fill();
+
+      // Circle
+      ctx.beginPath();ctx.arc(x,y,n.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(6,10,18,0.9)';ctx.fill();
+      ctx.strokeStyle=n.color;ctx.lineWidth=i===0?2.5:1.5;
+      ctx.globalAlpha=0.6+0.2*Math.sin(t*3+i);ctx.stroke();ctx.globalAlpha=1;
+
+      // Pulsing ring for center
+      if(i===0){
+        var pr=n.r+10+Math.sin(t*2)*8;
+        ctx.beginPath();ctx.arc(x,y,pr,0,Math.PI*2);
+        ctx.strokeStyle='rgba(123,47,255,'+(0.1+0.1*Math.sin(t*2))+')';
+        ctx.lineWidth=1;ctx.stroke();
+      }
+
+      // Label
+      var lines=n.label.split('\\n');
+      ctx.fillStyle=i===0?n.color:'#fff';
+      ctx.font=i===0?'bold 11px Rajdhani,sans-serif':'bold 9px Rajdhani,sans-serif';
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      var ly=y-(lines.length-1)*6;
+      lines.forEach(function(line){
+        ctx.fillText(line,x,ly);ly+=12;
+      });
+    });
+
+    // Title
+    ctx.fillStyle='rgba(123,47,255,0.5)';ctx.font='bold 10px Rajdhani,sans-serif';
+    ctx.textAlign='center';ctx.textBaseline='top';
+    ctx.fillText('SGS DATA ECOSYSTEM',w/2,8);
+    ctx.fillStyle='rgba(136,153,187,0.3)';ctx.font='8px sans-serif';
+    ctx.fillText('50 years · 5 data layers · 1 AI engine',w/2,22);
+
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',function(){resize();});
+  draw();
+})();
+
+// ══════════════════════════════════════════════════════════════
+// NSG PARTNERSHIP CANVAS — Satellite orbital visualization
+// ══════════════════════════════════════════════════════════════
+(function(){
+  var cv=document.getElementById('nsgCanvas');
+  if(!cv) return;
+  var par=cv.parentElement;
+  function resize(){cv.width=par.offsetWidth||400;cv.height=par.offsetHeight||500;}
+  resize();
+  var ctx=cv.getContext('2d');
+  var t=0;
+
+  function draw(){
+    t+=0.012;
+    var w=cv.width,h=cv.height,mx=w/2,my=h/2;
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle='rgba(6,10,18,0.97)';ctx.fillRect(0,0,w,h);
+
+    // Stars
+    for(var s=0;s<40;s++){
+      var sx=(Math.sin(s*127.1+s)*0.5+0.5)*w;
+      var sy=(Math.cos(s*311.7+s)*0.5+0.5)*h;
+      ctx.fillStyle='rgba(255,255,255,'+(0.15+0.25*Math.sin(t*2+s))+')';
+      ctx.fillRect(sx,sy,1.5,1.5);
+    }
+
+    // Arabian Shield circle
+    var er=Math.min(w,h)*0.18;
+    var eg=ctx.createRadialGradient(mx,my,0,mx,my,er);
+    eg.addColorStop(0,'rgba(20,50,40,0.9)');eg.addColorStop(0.7,'rgba(15,35,30,0.8)');eg.addColorStop(1,'rgba(10,20,18,0.6)');
+    ctx.beginPath();ctx.arc(mx,my,er,0,Math.PI*2);ctx.fillStyle=eg;ctx.fill();
+    ctx.strokeStyle='rgba(212,168,67,0.4)';ctx.lineWidth=1.5;ctx.stroke();
+
+    // Shield terrain
+    ctx.strokeStyle='rgba(212,168,67,0.12)';ctx.lineWidth=0.8;
+    for(var tl=0;tl<6;tl++){ctx.beginPath();ctx.arc(mx,my,er*(0.3+tl*0.12),tl*1.05+0.3,tl*1.05+2.1);ctx.stroke();}
+
+    ctx.fillStyle='rgba(212,168,67,0.6)';ctx.font='bold 10px Rajdhani,sans-serif';
+    ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText('ARABIAN',mx,my-8);ctx.fillText('SHIELD',mx,my+6);
+    ctx.font='7px sans-serif';ctx.fillStyle='rgba(212,168,67,0.35)';
+    ctx.fillText('650,000 km\u00B2',mx,my+18);
+
+    // Three orbital rings with satellites
+    var orbs=[
+      {r:er*1.6,c:'#7B2FFF',l:'SGS',e:'\uD83E\uDDE0',sp:0.3},
+      {r:er*2.2,c:'#00C3FF',l:'NSG',e:'\uD83D\uDEF0\uFE0F',sp:-0.2},
+      {r:er*2.8,c:'#D4A843',l:'QASSAS',e:'\u26A1',sp:0.15},
+    ];
+
+    orbs.forEach(function(o,i){
+      // Orbit ring
+      ctx.beginPath();ctx.arc(mx,my,o.r,0,Math.PI*2);
+      ctx.strokeStyle=o.c;ctx.globalAlpha=0.15;ctx.lineWidth=1;
+      ctx.setLineDash([6,4]);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;
+
+      // Satellite position
+      var ag=t*o.sp+i*2.1;
+      var sx=mx+Math.cos(ag)*o.r, sy=my+Math.sin(ag)*o.r;
+
+      // Satellite marker
+      ctx.beginPath();ctx.arc(sx,sy,12,0,Math.PI*2);
+      ctx.fillStyle='rgba(6,10,18,0.9)';ctx.fill();
+      ctx.strokeStyle=o.c;ctx.lineWidth=2;ctx.globalAlpha=0.8;ctx.stroke();ctx.globalAlpha=1;
+      ctx.font='12px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+      ctx.fillText(o.e,sx,sy);
+      ctx.font='bold 9px Rajdhani,sans-serif';ctx.fillStyle=o.c;
+      ctx.fillText(o.l,sx,sy-18);
+
+      // Connection beam
+      ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(mx,my);
+      ctx.strokeStyle=o.c;ctx.globalAlpha=0.06+0.04*Math.sin(t*3+i);ctx.lineWidth=1;ctx.stroke();ctx.globalAlpha=1;
+
+      // Data particle
+      var pp=(t*0.4+i*0.33)%1;
+      ctx.beginPath();ctx.arc(sx+(mx-sx)*pp,sy+(my-sy)*pp,3,0,Math.PI*2);
+      ctx.fillStyle=o.c;ctx.globalAlpha=0.6;ctx.fill();ctx.globalAlpha=1;
+    });
+
+    // Center pulse
+    ctx.beginPath();ctx.arc(mx,my,er+8+Math.sin(t*2)*6,0,Math.PI*2);
+    ctx.strokeStyle='rgba(212,168,67,'+(0.08+0.06*Math.sin(t*2))+')';ctx.lineWidth=1;ctx.stroke();
+
+    // Title
+    ctx.fillStyle='rgba(0,195,255,0.4)';ctx.font='bold 10px Rajdhani,sans-serif';
+    ctx.textAlign='center';ctx.textBaseline='top';
+    ctx.fillText('SAUDI MINERAL DISCOVERY ECOSYSTEM',mx,8);
+    ctx.fillStyle='rgba(136,153,187,0.3)';ctx.font='8px sans-serif';
+    ctx.fillText('SGS Brain \u00B7 NSG Eyes \u00B7 QASSAS Intelligence',mx,22);
+
+    // Saudi badge
+    ctx.fillStyle='rgba(212,168,67,0.08)';
+    var bw=180,bh=24,bx=mx-bw/2,by=h-36;
+    ctx.beginPath();ctx.moveTo(bx+8,by);ctx.lineTo(bx+bw-8,by);ctx.quadraticCurveTo(bx+bw,by,bx+bw,by+8);
+    ctx.lineTo(bx+bw,by+bh-8);ctx.quadraticCurveTo(bx+bw,by+bh,bx+bw-8,by+bh);
+    ctx.lineTo(bx+8,by+bh);ctx.quadraticCurveTo(bx,by+bh,bx,by+bh-8);
+    ctx.lineTo(bx,by+8);ctx.quadraticCurveTo(bx,by,bx+8,by);ctx.fill();
+    ctx.strokeStyle='rgba(212,168,67,0.25)';ctx.lineWidth=1;ctx.stroke();
+    ctx.fillStyle='rgba(212,168,67,0.7)';ctx.font='bold 9px Rajdhani,sans-serif';
+    ctx.fillText('\uD83C\uDDF8\uD83C\uDDE6  100% SAUDI SOVEREIGNTY',mx,by+13);
+
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',function(){resize();});
+  draw();
+})();
+
 </script>
 
 <script>
@@ -5681,7 +6694,8 @@ function sw(el, ar, arText){ ar ? ap(el, arText) : rs(el); }
 
 /* ── AR dictionary ─────────────────────────────────────────────── */
 var D = {
-  s1_conf:'الربع الأول 2025 · سري', s1_label:'أول شركة سعودية متكاملة للذكاء الاصطناعي والأنظمة المستقلة',
+  s1_conf:'الربع الأول 2026 · سري', s1_label:'أول شركة سعودية متكاملة للذكاء الاصطناعي والأنظمة المستقلة',
+  s1_aibadge:'2026 — عام الذكاء الاصطناعي في المملكة العربية السعودية',
   s1_tagline:'نُشغِّل مستقبل الذكاء الاصطناعي في المملكة — من البيانات إلى الفعل',
   s1_sub:'بنية تحتية للذكاء الاصطناعي · روبوتات مستقلة · استخبارات معدنية · توائم رقمية · رؤية 2030',
   s1_badge:'متوافق مع رؤية 2030', s1_series:'هدف السلسلة أ', s1_patents:'براءة اختراع معلقة',
@@ -5802,22 +6816,85 @@ var D = {
   s11_p4_1:'إطلاق محرك الاكتشاف المعدني العالمي', s11_p4_2:'أكثر من 100 عميل مؤسسي وحكومي',
   s11_p4_3:'توسيع قصاص إلى أسطول تجاري من 100 وحدة', s11_p4_4:'طرح عام في تداول أو استحواذ استراتيجي',
 
-  s12_label:'15 / المؤسسون', s12_big:'تعرّف على المؤسسين',
+  s12_label:'19 / المؤسسون', s12_big:'تعرّف على المؤسسين',
   s12_sub:'بنت زينترا على يد مؤسسَين يجمعان خبرات الذكاء الاصطناعي وتقنية الحكومة والأنظمة المستقلة — مهمة مشتركة لبناء تقنية عميقة من المملكة',
-  s12_f1t:'المؤسس والرئيس التنفيذي', s12_f1loc:'📍 الرياض، المملكة العربية السعودية',
+  s12_f1t:'المؤسس المشارك', s12_f1loc:'📍 الرياض، المملكة العربية السعودية',
   s12_f1b1:'محمد نبيل مواطن مغربي وُلد في المملكة العربية السعودية 🇸🇦. هو العقل المدبر وراء رؤية زينترا وموقعها في السوق وبناء تحالفاتها.',
   s12_f1b2:'يقود التوجه الاستراتيجي للشركة وتموضعها في السوق واستراتيجية الشراكات وإشراك أصحاب المصلحة.',
-  s12_f2t:'المؤسس المشارك والمدير التقني', s12_f2loc:'📍 الرياض، المملكة العربية السعودية',
+  s12_f2t:'المؤسس المشارك', s12_f2loc:'📍 الرياض، المملكة العربية السعودية',
   s12_f2b1:'محمد نوري مواطن سوداني وُلد في المملكة العربية السعودية 🇸🇦. يقود البنية التقنية لزينترا وعمليات الروبوتات وقسم الذكاء الاصطناعي.',
   s12_f2b2:'يمتلك أكثر من 10 سنوات من الخبرة في تصميم وتسليم منصات حكومية واسعة النطاق وأنظمة بيانات وبنى تحتية للذكاء الاصطناعي.',
   s12_adv:'شبكة المستشارين',
   s12_adv1:'تعدين وموارد', s12_adv2:'تقنية حكومية', s12_adv3:'بحث في الذكاء الاصطناعي', s12_adv4:'العلوم الجيومكانية',
   s12_adv5:'الاستثمار والتمويل', s12_adv6:'استراتيجية رؤية 2030', s12_adv7:'التوأم الرقمي', s12_adv8:'مبيعات المؤسسات',
 
-  s13_conf:'الربع الأول 2025 · سري', s13_line:'نُشغِّل مستقبل الذكاء الاصطناعي في المملكة — من البيانات إلى الفعل',
+  s14_label:'15 / البيانات المعالجة بقصاص', s14_title:'بيانات قصاص المعالجة', s14_title2:'وادي خيام — الدرع العربي',
+  s14_sub:'أثبتت المنصة كفاءتها التشغيلية من خلال معالجة بيانات برنامج <b style="color:var(--white)">التعدين – الجولة 11 (وادي خيام)</b>، ضمن <b style="color:var(--cyan)">مبادرة تسريع الاستكشاف</b> — وهي جهد حكومي يهدف إلى تسريع الاستكشاف في المملكة وإتاحة المزيد من البيانات للمستثمرين عبر <a href="https://taadeen.sa/ar/mining-" target="_blank" style="color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)">بوابة التعدين السعودية (تدين)</a>.',
+  s14_th1:'نوع البيانات', s14_th2:'الكمية المعالجة',
+  s14_r1l:'إجمالي الملفات', s14_r1v:'15,526 ملف من غرفة بيانات تدين',
+  s14_r2l:'عينات جيوكيميائية', s14_r2v:'800–1,200 ملف (عينات تربة وصخور)',
+  s14_r3l:'مسوحات مغناطيسية جوية', s14_r3v:'200–300 شبكة GeoTIFF',
+  s14_r4l:'مسوحات إشعاعية', s14_r4v:'150–250 شبكة (K-Th-U)',
+  s14_r5l:'شبكات الصدوع', s14_r5v:'300–500 ملف شكلي',
+  s14_r6l:'خرائط جيولوجية', s14_r6v:'50–100 خريطة (مقياس 1:100,000)',
+  s14_r7l:'صور الأقمار الصناعية', s14_r7v:'تنزيل تلقائي (Sentinel-2, ASTER, SRTM)',
+  s14_summary_ar:'في <b style="color:var(--gold)">32 ساعة فقط</b>، حللت منصة قصاص <b style="color:var(--white)">15,526 ملفاً جيولوجياً</b> تغطي <b style="color:var(--white)">11 منطقة</b> ضمن منطقة وادي خيام في الدرع العربي. حددت نتائج التحليل <b style="color:var(--cyan)">55 موقع استكشاف ذا أولوية عالية</b> جاهزاً لبرامج الحفر، بقيمة اقتصادية تقديرية تتجاوز <b style="color:var(--gold)">17.5 مليار ريال سعودي</b> وتقدير أولي يتجاوز <b style="color:var(--white)">3 ملايين أونصة ذهب</b>. علاوة على ذلك، خفّضت تكاليف التشغيل بنسبة <b style="color:var(--cyan)">89%</b> مقارنة بالطرق التقليدية.',
+  s14_stat1:'الملفات المعالجة', s14_stat1s:'غرفة بيانات تدين SGS الجولة 11',
+  s14_stat2:'أهداف الاستكشاف', s14_stat2s:'أهداف ذهب جاهزة للحفر',
+  s14_stat3:'القيمة الحالية المتوقعة', s14_stat3s:'4.67 مليار دولار قيمة تقديرية',
+  s14_stat4:'أونصة ذهب (koz)', s14_stat4s:'96.7 مليون طن @ 1.64 غ/طن مورد محتمل',
+  s14_stat5:'وقت المعالجة', s14_stat6:'توفير التكاليف',
+
+  s15_label:'16 / شراكة SGS', s15_title:'تطوير قصاص و', s15_title2:'فرصة الشراكة مع هيئة المساحة الجيولوجية',
+  s15_sub:'طُوّر قصاص باستخدام بيانات جيولوجية سعودية متعددة المصادر، تشمل تحليل صور الأقمار الصناعية ورسم خرائط الصدوع البنيوية والتعرف على أنماط الكيمياء الجيولوجية. صُممت المنصة للتكامل مع قاعدة البيانات الجيولوجية الشاملة لهيئة المساحة الجيولوجية السعودية.',
+  s15_strat:'فرصة شراكة استراتيجية',
+  s15_stratdesc:'الوصول الكامل إلى أرشيف SGS الممتد لـ <b style="color:var(--white)">50 عاماً</b> سيمكّن قصاص من تحقيق <b style="color:var(--cyan)">دقة غير مسبوقة</b> في اكتشاف المعادن عبر الدرع العربي. يمثل هذا الأرشيف <b style="color:var(--purple)">أغنى مورد تدريب جيولوجي</b> في الشرق الأوسط.',
+  s15_th1:'مكون قاعدة بيانات SGS', s15_th2:'قيمة التدريب المحتملة',
+  s15_r1l:'ثقوب الحفر التاريخية', s15_r1v:'<b style="color:var(--cyan)">+5,000</b> سجل حفر — معايرة العمق والدرجة',
+  s15_r2l:'مواقع المعادن المعروفة', s15_r2v:'<b style="color:var(--cyan)">+3,000</b> موقع موثق — بيانات تدريب لنماذج AI',
+  s15_r3l:'قاعدة البيانات الجيوكيميائية', s15_r3v:'<b style="color:var(--cyan)">+200,000</b> تحليل تربة/صخور — أنماط العناصر',
+  s15_r4l:'الخرائط الجيولوجية', s15_r4v:'تغطية كاملة للدرع العربي — بيانات صخرية وبنيوية',
+  s15_r5l:'المسوحات الجيوفيزيائية', s15_r5v:'مغناطيسية جوية وإشعاعية — بصمات حرارية مائية',
+  s15_closing:'ستضع هذه الشراكة الاستراتيجية قصاص كـ <b style="color:var(--cyan)">أدق نظام ذكاء اصطناعي لاكتشاف المعادن</b> في المنطقة، مدرّب حصرياً على <b style="color:var(--white)">البصمات الجيولوجية السعودية</b> المتراكمة عبر <b style="color:var(--purple)">خمسة عقود</b> من الاستكشاف المنهجي.',
+
+  s16_label:'17 / مجموعة نيو الفضائية', s16_title:'مجموعة نيو الفضائية', s16_title2:'شراكة — اكتشاف غير المرئي',
+  s16_sub:'أثبت قصاص قدرته على بيانات SGS المتاحة للمناطق المستكشفة من الدرع العربي. لكن تبقى <b style="color:var(--white)">أراضٍ شاسعة غير مستكشفة</b> تفتقر إلى المسوحات الجيولوجية الأرضية.',
+  s16_intro:'<b style="color:var(--cyan)">مجموعة نيو الفضائية (NSG)</b> — شركة أقمار صناعية سعودية <b style="color:var(--gold)">مملوكة لصندوق الاستثمارات العامة</b> — تشغّل أقماراً صناعية عالية الدقة بدقة <b style="color:var(--white)">50 سم</b>. الشراكة الاستراتيجية بين قصاص و NSG ستفتح:',
+  s16_th1:'القدرة', s16_th2:'الأثر',
+  s16_r1l:'المناطق غير المستكشفة', s16_r1v:'مناطق بـ <b style="color:var(--gold)">صفر</b> بيانات تاريخية — أقمار NSG توفر صوراً حيث لم تصل المسوحات الأرضية',
+  s16_r2l:'دقة 50 سم', s16_r2v:'<b style="color:var(--cyan)">10 أضعاف</b> أفضل من الأقمار المجانية — كشف مناطق التغير بحجم 5 أمتار',
+  s16_r3l:'تغطية وطنية', s16_r3v:'مسح الدرع العربي بالكامل (<b style="color:var(--white)">650,000 كم²</b>) في أشهر لا عقود',
+  s16_r4l:'السيادة السعودية', s16_r4v:'حزمة تقنية <b style="color:var(--gold)">سعودية 100%</b>: NSG + قصاص + SGS — بدون تبعية أجنبية',
+  s16_vislabel:'الرؤية الاستراتيجية',
+  s16_vision:'<b style="color:var(--purple)">SGS</b> توفر قاعدة البيانات الجيولوجية <b style="color:var(--lgray)">(العقل)</b>، <b style="color:var(--cyan)">NSG</b> توفر صور الأقمار الصناعية <b style="color:var(--lgray)">(العيون)</b>، و<b style="color:var(--gold)">قصاص</b> يوفر الذكاء الاصطناعي. معاً، هذا <b style="color:var(--white)">النظام السعودي</b> يمكنه فتح مليارات الدولارات من الموارد المعدنية غير المكتشفة عبر المملكة.',
+  s16_p1:'SGS', s16_p1s:'العقل', s16_p2:'NSG', s16_p2s:'العيون', s16_p3:'قصاص', s16_p3s:'الذكاء',
+
+  s17_label:'18 / القيمة الاستراتيجية', s17_title:'القيمة الاستراتيجية لـ', s17_title2:'قصاص — السيادة الوطنية',
+  s17_sub:'تكمن القيمة الاستراتيجية للمشروع في إنشاء منظومة وطنية شاملة للسيادة التقنية في الاستكشاف المعدني، ترتكز على ثلاث ركائز رئيسية:',
+  s17_p1h:'هيئة المساحة الجيولوجية السعودية (SGS)', s17_p1b:'المرجع الوطني للمعرفة الجيولوجية، توفر البيانات والخبرات اللازمة لتحليل الملفات الجيولوجية للمناطق المستكشفة وبناء نماذج التدريب وتحديد أولويات الحفر والاستكشاف للمعادن المختلفة.',
+  s17_p2h:'مجموعة نيو الفضائية (NSG)', s17_p2b:'الأقمار الصناعية الوطنية، توفر صوراً وبيانات فضائية عالية الدقة لمناطق لم يسبق استكشافها، تساهم في رصد المؤشرات السطحية وتحديد مواقع الاستكشاف ذات الأولوية.',
+  s17_p3h:'منصة قصاص', s17_p3b:'المحرك السيادي الوطني للذكاء الاصطناعي — يحلل البيانات من مصادر متعددة، ويدمج المؤشرات الجيولوجية والجيوفيزيائية والجيوكيميائية والاستشعار عن بعد، ثم يولّد توصيات ذكية لفرص الاكتشاف.',
+  s17_eq1:'المعرفة', s17_eq2:'العين الفضائية', s17_eq3:'الذكاء', s17_eqr:'السيادة السعودية',
+  s17_contlabel:'مساهمات مباشرة في رؤية 2030',
+  s17_c1:'<b style="color:var(--white)">تسريع أهداف رؤية 2030</b> — زيادة مساهمة قطاع التعدين في الناتج المحلي الإجمالي',
+  s17_c2:'<b style="color:var(--white)">توطين تقنيات الذكاء الاصطناعي العميق</b> — في قطاع التعدين والاستكشاف',
+  s17_c3:'<b style="color:var(--white)">تطوير الإيرادات غير النفطية</b> — تعزيز التنويع الاقتصادي',
+  s17_c4:'<b style="color:var(--white)">تقليل الاعتماد على الحلول الأجنبية</b> — في القطاعات الاستراتيجية',
+  s17_c5:'<b style="color:var(--white)">تسريع الاستكشاف</b> — في المناطق المحرومة تاريخياً وتحسين كفاءة الحفر',
+  s17_c6:'<b style="color:var(--white)">تعزيز جاذبية الاستثمار التعديني</b> — تحسين جودة البيانات ودقة التنبؤات',
+  s17_c7:'<b style="color:var(--gold)">بناء منظومة سيادية وطنية شاملة</b> — في تقنيات الاستكشاف الذكي مملوكة للمملكة',
+
+  s13_conf:'الربع الأول 2026 · سري', s13_line:'نُشغِّل مستقبل الذكاء الاصطناعي في المملكة — من البيانات إلى الفعل',
+  s13_tagline:'نُشغِّل مستقبل الذكاء الاصطناعي في المملكة — من البيانات إلى الفعل',
+  s13_askh:'طلبنا',
+  s13_ask1:'<b style="color:var(--white)">اعتماد المنصة</b> كابتكار وطني يدعم قطاع التعدين والموارد المعدنية.',
+  s13_ask2:'<b style="color:var(--white)">خطاب دعم وتزكية</b> للجهات المعنية لتسريع إجراءات الترخيص الريادي وتمكين الاستثمار لزينترا.',
+  s13_ask3:'<b style="color:var(--white)">شراكات مؤسسية</b> مع الجهات المعنية لتوسيع نطاق تطبيق قصاص عبر منطقة الدرع العربي.',
+  s13_ask4:'<b style="color:var(--white)">التكامل المستقبلي</b> مع هيئة المساحة الجيولوجية السعودية (SGS) ومجموعة نيو الفضائية (NSG) ضمن إطار سيادي وطني.',
+  s13_commit:'نؤكد لمعاليكم التزامنا الكامل وحرصنا على تسخير هذه التقنية لـ<b style="color:var(--white)">خدمة الوطن</b>، وتعزيز مكانة المملكة كـ<b style="color:var(--cyan)">مركز عالمي للذكاء الاصطناعي الصناعي والتقنيات العميقة</b>، والمساهمة في تحقيق أهداف <b style="color:var(--gold)">رؤية المملكة 2030</b> في قطاع التعدين.',
   s13_ctah:'جولة تمويل السلسلة أ · هدف 15 مليون دولار · نبحث عن شركاء استراتيجيين وحكوميين',
   s13_ctas:'تقنية عميقة · متوافق مع رؤية 2030 · مؤسَّس سعودياً · السلسلة أ مفتوحة',
-  s13_ctac:'contact@zyntra.ai · www.zyntra.ai · الرياض، المملكة العربية السعودية · linkedin.com/company/zyntra-ai',
+  s13_ctac:'contact@zyntra.com.sa · www.zyntra.com.sa · الرياض، المملكة العربية السعودية',
   s13_b1:'متوافق مع رؤية 2030', s13_b2:'مؤسَّس سعودياً',
 };
 
@@ -5828,6 +6905,7 @@ function slide1(ar){
   sw(q('#s1 .tagline'), ar, D.s1_tagline);
   sw(q('#s1 .sub'), ar, D.s1_sub);
   sw(q('#s1 .badge span'), ar, D.s1_badge);
+  sw(q('#s1-aibadge-text'), ar, D.s1_aibadge);
   var sh = q('#s1 .shead'); if(sh) sw(sh.lastElementChild, ar, D.s1_conf);
   qa('#s1 [style*="letter-spacing:2px"][style*="color:var(--gray)"]').forEach(function(el){
     var orig = el.getAttribute('data-i18n-orig') || el.textContent;
@@ -5855,13 +6933,11 @@ function slideA(ar){
   sw(q('#sA .big-h'), ar, D.sA_big);
   sw(q('#sA .sub-h'), ar, D.sA_sub);
   sw(q('#sA .left [style*="letter-spacing:3px"]'), ar, D.sA_mlbl);
-  var rows = qa('#sA .left [style*="border-radius:11px"]');
-  var m = [{h:'sA_m1h',b:'sA_m1b'},{h:'sA_m2h',b:'sA_m2b'},{h:'sA_m3h',b:'sA_m3b'},{h:'sA_m4h',b:'sA_m4b'}];
-  rows.forEach(function(r, i){
-    if(i >= m.length) return;
-    sw(qIn(r,'[style*="font-size:14px"]'), ar, D[m[i].h]);
-    sw(qIn(r,'[style*="font-size:11px"]'), ar, D[m[i].b]);
-  });
+  // Method rows — ID-based
+  sw(q('#sA-m1h'), ar, D.sA_m1h); sw(q('#sA-m1b'), ar, D.sA_m1b);
+  sw(q('#sA-m2h'), ar, D.sA_m2h); sw(q('#sA-m2b'), ar, D.sA_m2b);
+  sw(q('#sA-m3h'), ar, D.sA_m3h); sw(q('#sA-m3b'), ar, D.sA_m3b);
+  sw(q('#sA-m4h'), ar, D.sA_m4h); sw(q('#sA-m4b'), ar, D.sA_m4b);
   var note = q('#sA [style*="rgba(212,168,67"]');
   if(note) sw(note.lastElementChild, ar, D.sA_ksa);
   qa('#sA [style*="animation:float2"]').forEach(function(b){
@@ -6200,18 +7276,183 @@ function slide13(ar){
   var sh = q('#s13 .shead');
   if(sh) sw(sh.lastElementChild, ar, D.s13_conf);
 
-  /* tagline — target by its exact unique style, NOT by textContent scan */
-  sw(q('#s13 [style*="font-size:16px"][style*="letter-spacing:3px"][style*="lgray"]'), ar, D.s13_line);
+  /* tagline */
+  sw(q('#s13-tagline'), ar, D.s13_tagline);
 
-  /* cta-box contents */
-  sw(q('#s13 .cta-box [style*="font-size:22px"]'), ar, D.s13_ctah);
-  sw(q('#s13 .cta-box [style*="letter-spacing:2px"]'), ar, D.s13_ctas);
-  sw(q('#s13 .cta-box [style*="color:var(--lgray)"]'), ar, D.s13_ctac);
+  /* ask heading */
+  sw(q('#s13-askh'), ar, D.s13_askh);
+
+  /* 4 asks — HTML swap */
+  ['ask1','ask2','ask3','ask4'].forEach(function(k){
+    var el=q('#s13-'+k);
+    if(el){
+      if(!el.hasAttribute('data-i18n-orig-html')) el.setAttribute('data-i18n-orig-html',el.innerHTML);
+      if(ar){el.innerHTML=D['s13_'+k];}else{var o=el.getAttribute('data-i18n-orig-html');if(o)el.innerHTML=o;}
+    }
+  });
+
+  /* commitment — HTML swap */
+  var cm=q('#s13-commit');
+  if(cm){
+    if(!cm.hasAttribute('data-i18n-orig-html')) cm.setAttribute('data-i18n-orig-html',cm.innerHTML);
+    if(ar){cm.innerHTML=D.s13_commit;}else{var o=cm.getAttribute('data-i18n-orig-html');if(o)cm.innerHTML=o;}
+  }
+
+  /* CTA box */
+  sw(q('#s13-ctah'), ar, D.s13_ctah);
+  sw(q('#s13-ctas'), ar, D.s13_ctas);
+  sw(q('#s13-ctac'), ar, D.s13_ctac);
 
   /* badges */
   var badges = qa('#s13 .cbadge');
   sw(badges[0]||null, ar, D.s13_b1);
   sw(badges[1]||null, ar, D.s13_b2);
+}
+
+function slide14(ar){
+  sw(q('#s14-label'), ar, D.s14_label);
+  sw(q('#s14-th1'), ar, D.s14_th1);
+  sw(q('#s14-th2'), ar, D.s14_th2);
+  /* subtitle — contains HTML, use innerHTML swap */
+  var subEl = q('#s14-sub');
+  if(subEl){
+    if(!subEl.hasAttribute('data-i18n-orig-html')) subEl.setAttribute('data-i18n-orig-html', subEl.innerHTML);
+    if(ar){ subEl.innerHTML = D.s14_sub; } else { var origSub = subEl.getAttribute('data-i18n-orig-html'); if(origSub) subEl.innerHTML = origSub; }
+  }
+  sw(q('#s14-r1l'), ar, D.s14_r1l);
+  sw(q('#s14-r1v'), ar, D.s14_r1v);
+  sw(q('#s14-r2l'), ar, D.s14_r2l);
+  sw(q('#s14-r2v'), ar, D.s14_r2v);
+  sw(q('#s14-r3l'), ar, D.s14_r3l);
+  sw(q('#s14-r3v'), ar, D.s14_r3v);
+  sw(q('#s14-r4l'), ar, D.s14_r4l);
+  sw(q('#s14-r4v'), ar, D.s14_r4v);
+  sw(q('#s14-r5l'), ar, D.s14_r5l);
+  sw(q('#s14-r5v'), ar, D.s14_r5v);
+  sw(q('#s14-r6l'), ar, D.s14_r6l);
+  sw(q('#s14-r6v'), ar, D.s14_r6v);
+  sw(q('#s14-r7l'), ar, D.s14_r7l);
+  sw(q('#s14-r7v'), ar, D.s14_r7v);
+  /* summary — swap innerHTML for formatted text */
+  var sumEl = q('#s14-summary');
+  if(sumEl){
+    if(!sumEl.hasAttribute('data-i18n-orig-html')) sumEl.setAttribute('data-i18n-orig-html', sumEl.innerHTML);
+    if(ar){ sumEl.innerHTML = D.s14_summary_ar; } else { var orig = sumEl.getAttribute('data-i18n-orig-html'); if(orig) sumEl.innerHTML = orig; }
+  }
+  /* title — swap innerHTML for formatted text */
+  var titleEl = q('#s14-title');
+  if(titleEl){
+    if(!titleEl.hasAttribute('data-i18n-orig-html')) titleEl.setAttribute('data-i18n-orig-html', titleEl.innerHTML);
+    if(ar){ titleEl.innerHTML = D.s14_title + '<br><span class="gold-text">' + D.s14_title2 + '</span>'; } else { var orig = titleEl.getAttribute('data-i18n-orig-html'); if(orig) titleEl.innerHTML = orig; }
+  }
+  sw(q('#s14-stat1'), ar, D.s14_stat1);
+  sw(q('#s14-stat2'), ar, D.s14_stat2);
+  sw(q('#s14-stat3'), ar, D.s14_stat3);
+  sw(q('#s14-stat4'), ar, D.s14_stat4);
+  sw(q('#s14-stat5'), ar, D.s14_stat5);
+  sw(q('#s14-stat6'), ar, D.s14_stat6);
+}
+
+function slide15(ar){
+  sw(q('#s15-label'), ar, D.s15_label);
+  /* title — HTML swap */
+  var t15=q('#s15-title');
+  if(t15){
+    if(!t15.hasAttribute('data-i18n-orig-html')) t15.setAttribute('data-i18n-orig-html',t15.innerHTML);
+    if(ar){t15.innerHTML=D.s15_title+'<br><span class="grad-text">'+D.s15_title2+'</span>';}
+    else{var o=t15.getAttribute('data-i18n-orig-html');if(o)t15.innerHTML=o;}
+  }
+  /* sub — HTML swap */
+  var sub15=q('#s15-sub');
+  if(sub15){
+    if(!sub15.hasAttribute('data-i18n-orig-html')) sub15.setAttribute('data-i18n-orig-html',sub15.innerHTML);
+    if(ar){sub15.textContent=D.s15_sub;}else{var o=sub15.getAttribute('data-i18n-orig-html');if(o)sub15.innerHTML=o;}
+  }
+  sw(q('#s15-strat'), ar, D.s15_strat);
+  /* stratdesc — HTML */
+  var sd=q('#s15-stratdesc');
+  if(sd){
+    if(!sd.hasAttribute('data-i18n-orig-html')) sd.setAttribute('data-i18n-orig-html',sd.innerHTML);
+    if(ar){sd.innerHTML=D.s15_stratdesc;}else{var o=sd.getAttribute('data-i18n-orig-html');if(o)sd.innerHTML=o;}
+  }
+  sw(q('#s15-th1'), ar, D.s15_th1);sw(q('#s15-th2'), ar, D.s15_th2);
+  /* table rows — HTML swap for bold tags */
+  ['r1','r2','r3','r4','r5'].forEach(function(r){
+    var lbl=q('#s15-'+r+'l'), val=q('#s15-'+r+'v');
+    sw(lbl, ar, D['s15_'+r+'l']);
+    if(val){
+      if(!val.hasAttribute('data-i18n-orig-html')) val.setAttribute('data-i18n-orig-html',val.innerHTML);
+      if(ar){val.innerHTML=D['s15_'+r+'v'];}else{var o=val.getAttribute('data-i18n-orig-html');if(o)val.innerHTML=o;}
+    }
+  });
+  /* closing — HTML */
+  var cl=q('#s15-closing');
+  if(cl){
+    if(!cl.hasAttribute('data-i18n-orig-html')) cl.setAttribute('data-i18n-orig-html',cl.innerHTML);
+    if(ar){cl.innerHTML=D.s15_closing;}else{var o=cl.getAttribute('data-i18n-orig-html');if(o)cl.innerHTML=o;}
+  }
+}
+
+function slide16(ar){
+  sw(q('#s16-label'), ar, D.s16_label);
+  var t16=q('#s16-title');
+  if(t16){
+    if(!t16.hasAttribute('data-i18n-orig-html')) t16.setAttribute('data-i18n-orig-html',t16.innerHTML);
+    if(ar){t16.innerHTML=D.s16_title+'<br><span class="gold-text">'+D.s16_title2+'</span>';}
+    else{var o=t16.getAttribute('data-i18n-orig-html');if(o)t16.innerHTML=o;}
+  }
+  var sub16=q('#s16-sub');
+  if(sub16){
+    if(!sub16.hasAttribute('data-i18n-orig-html')) sub16.setAttribute('data-i18n-orig-html',sub16.innerHTML);
+    if(ar){sub16.innerHTML=D.s16_sub;}else{var o=sub16.getAttribute('data-i18n-orig-html');if(o)sub16.innerHTML=o;}
+  }
+  var intro16=q('#s16-intro');
+  if(intro16){
+    if(!intro16.hasAttribute('data-i18n-orig-html')) intro16.setAttribute('data-i18n-orig-html',intro16.innerHTML);
+    if(ar){intro16.innerHTML=D.s16_intro;}else{var o=intro16.getAttribute('data-i18n-orig-html');if(o)intro16.innerHTML=o;}
+  }
+  sw(q('#s16-th1'), ar, D.s16_th1); sw(q('#s16-th2'), ar, D.s16_th2);
+  ['r1','r2','r3','r4'].forEach(function(r){
+    sw(q('#s16-'+r+'l'), ar, D['s16_'+r+'l']);
+    var v=q('#s16-'+r+'v');
+    if(v){
+      if(!v.hasAttribute('data-i18n-orig-html')) v.setAttribute('data-i18n-orig-html',v.innerHTML);
+      if(ar){v.innerHTML=D['s16_'+r+'v'];}else{var o=v.getAttribute('data-i18n-orig-html');if(o)v.innerHTML=o;}
+    }
+  });
+  sw(q('#s16-vislabel'), ar, D.s16_vislabel);
+  var vis=q('#s16-vision');
+  if(vis){
+    if(!vis.hasAttribute('data-i18n-orig-html')) vis.setAttribute('data-i18n-orig-html',vis.innerHTML);
+    if(ar){vis.innerHTML=D.s16_vision;}else{var o=vis.getAttribute('data-i18n-orig-html');if(o)vis.innerHTML=o;}
+  }
+  sw(q('#s16-p1'), ar, D.s16_p1); sw(q('#s16-p1s'), ar, D.s16_p1s);
+  sw(q('#s16-p2'), ar, D.s16_p2); sw(q('#s16-p2s'), ar, D.s16_p2s);
+  sw(q('#s16-p3'), ar, D.s16_p3); sw(q('#s16-p3s'), ar, D.s16_p3s);
+}
+
+function slide17(ar){
+  sw(q('#s17-label'), ar, D.s17_label);
+  var t17=q('#s17-title');
+  if(t17){
+    if(!t17.hasAttribute('data-i18n-orig-html')) t17.setAttribute('data-i18n-orig-html',t17.innerHTML);
+    if(ar){t17.innerHTML=D.s17_title+'<br><span class="gold-text">'+D.s17_title2+'</span>';}
+    else{var o=t17.getAttribute('data-i18n-orig-html');if(o)t17.innerHTML=o;}
+  }
+  sw(q('#s17-sub'), ar, D.s17_sub);
+  sw(q('#s17-p1h'), ar, D.s17_p1h); sw(q('#s17-p1b'), ar, D.s17_p1b);
+  sw(q('#s17-p2h'), ar, D.s17_p2h); sw(q('#s17-p2b'), ar, D.s17_p2b);
+  sw(q('#s17-p3h'), ar, D.s17_p3h); sw(q('#s17-p3b'), ar, D.s17_p3b);
+  sw(q('#s17-eq1'), ar, D.s17_eq1); sw(q('#s17-eq2'), ar, D.s17_eq2);
+  sw(q('#s17-eq3'), ar, D.s17_eq3); sw(q('#s17-eqr'), ar, D.s17_eqr);
+  sw(q('#s17-contlabel'), ar, D.s17_contlabel);
+  ['c1','c2','c3','c4','c5','c6','c7'].forEach(function(k){
+    var el=q('#s17-'+k);
+    if(el){
+      if(!el.hasAttribute('data-i18n-orig-html')) el.setAttribute('data-i18n-orig-html',el.innerHTML);
+      if(ar){el.innerHTML=D['s17_'+k];}else{var o=el.getAttribute('data-i18n-orig-html');if(o)el.innerHTML=o;}
+    }
+  });
 }
 
 
@@ -6229,7 +7470,7 @@ window.setDeckLang = function(lang){
   slide1(ar); slide2(ar); slideA(ar); slideS3(ar);
   slideB(ar); slideC(ar); slide4(ar); slide5(ar);
   slide6(ar); slide7(ar); slide8(ar); slide9(ar);
-  slide10(ar); slide11(ar); slide12(ar); slide13(ar);
+  slide10(ar); slide11(ar); slide12(ar); slide14(ar); slide15(ar); slide16(ar); slide17(ar); slide13(ar);
 };
 
 /* ── Wire buttons after DOM ready ─────────────────────────────── */
@@ -6240,8 +7481,11 @@ window.setDeckLang = function(lang){
     if(en) en.addEventListener('click', function(){ window.setDeckLang('en'); });
     if(ar) ar.addEventListener('click', function(){ window.setDeckLang('ar'); });
   }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wire);
-  else wire();
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
 })();
 
 })();
