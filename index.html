@@ -15,14 +15,14 @@
   --white:#fff;--gray:#8899BB;--lgray:#AAB8CC;
   --fh:'Rajdhani',sans-serif;--fb:'Exo 2',sans-serif;
 }
-html,body{width:100%;height:100%;height:100dvh;overflow:hidden;background:#000;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;height:100%;overflow:hidden;background:#000}
 body{font-family:var(--fb)}
 
 
 /* ══ LANG SWITCH ══ */
 #lang-switch{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;
   background:rgba(6,10,18,.92);border:1px solid rgba(0,195,255,.3);
-  border-radius:30px;padding:3px;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  border-radius:30px;padding:3px;backdrop-filter:blur(16px);
   box-shadow:0 4px 24px rgba(0,0,0,.5);}
 .lbtn{background:none;border:none;outline:none;cursor:pointer;
   font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;
@@ -38,26 +38,23 @@ body.ar-mode .card div,body.ar-mode .sensor-item div,
 body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   font-family:'Noto Sans Arabic','Tajawal',sans-serif !important;}
 
-/* ── CURSOR — disabled, use native ── */
-html,body{cursor:auto}
-
 /* ── PROGRESS ── */
 #prog{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:200;transition:width .5s cubic-bezier(.4,0,.2,1)}
 
 /* ── DECK ── */
 #deck{width:100vw;height:100vh;position:relative;overflow:hidden}
-.slide{position:absolute;top:0;right:0;bottom:0;left:0;opacity:0;pointer-events:none;transition:opacity .65s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;background:var(--navy);overflow:hidden}
+.slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .65s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;background:var(--navy);overflow:hidden}
 .slide.active{opacity:1;pointer-events:all}
 
 /* ── GRAD BAR ── */
 .gbar{height:4px;width:100%;flex-shrink:0;position:relative;z-index:10;background:linear-gradient(90deg,var(--blue),var(--cyan) 33%,var(--purple) 66%,var(--magenta))}
-.gbar::after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:inherit;filter:blur(6px);opacity:.5}
+.gbar::after{content:'';position:absolute;inset:0;background:inherit;filter:blur(6px);opacity:.5}
 
 /* ── NAV ── */
-#nav{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;z-index:100;background:rgba(6,10,18,.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:40px;padding:10px 24px;user-select:none;-webkit-user-select:none}
-#prev,#next{background:none;border:1px solid rgba(255,255,255,.15);color:var(--lgray);font-family:var(--fh);font-size:13px;font-weight:600;letter-spacing:2px;padding:8px 18px;border-radius:24px;cursor:pointer;transition:all .25s;outline:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-#prev:hover,#next:hover,#prev:active,#next:active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,195,255,.08)}
-#snum{color:var(--cyan);font-family:var(--fh);font-size:15px;font-weight:700;letter-spacing:4px;min-width:70px;text-align:center}
+#nav{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;z-index:100;background:rgba(6,10,18,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:30px;padding:4px 12px;user-select:none;-webkit-user-select:none}
+#prev,#next{background:none;border:none;color:var(--cyan);font-size:22px;font-weight:300;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;outline:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation;padding:0;line-height:1}
+#prev:hover,#next:hover,#prev:active,#next:active{background:rgba(0,195,255,.1);color:#fff}
+#snum{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:11px;font-weight:600;letter-spacing:3px;min-width:50px;text-align:center}
 
 /* ── LOGO ── */
 .logo{font-family:var(--fh);font-size:20px;font-weight:700;letter-spacing:5px;color:var(--white)}
@@ -69,7 +66,7 @@ html,body{cursor:auto}
 .slabel.gold{color:var(--gold)}
 
 /* ── BG ELEMENTS ── */
-.bg-grid{position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(rgba(0,195,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,195,255,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 8s linear infinite;pointer-events:none}
+.bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,195,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,195,255,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 8s linear infinite;pointer-events:none}
 @keyframes gridMove{0%{transform:translateY(0)}100%{transform:translateY(60px)}}
 
 .orb{position:absolute;border-radius:50%;pointer-events:none}
@@ -141,7 +138,7 @@ html,body{cursor:auto}
 #s4 .qleft{padding:18px 32px 24px 48px;display:flex;flex-direction:column;gap:12px;position:relative;z-index:5}
 #s4 .qtitle{font-family:var(--fh);font-size:66px;font-weight:700;letter-spacing:8px;color:var(--white);line-height:1}
 #s4 .qright{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-#s4 .robot-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:radial-gradient(circle at 50% 50%,rgba(0,195,255,.14) 0%,rgba(123,47,255,.08) 40%,transparent 70%)}
+#s4 .robot-bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,195,255,.14) 0%,rgba(123,47,255,.08) 40%,transparent 70%)}
 #s4 .rimg{width:86%;max-height:100%;object-fit:contain;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 0 50px rgba(0,195,255,.5)) drop-shadow(0 0 100px rgba(123,47,255,.3));position:relative;z-index:2}
 #s4 .scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,195,255,.7),transparent);animation:scanLine 3s linear infinite;z-index:3}
 #s4 .sbadge{position:absolute;padding:7px 11px;border-radius:9px;background:rgba(6,10,18,.92);border:1px solid rgba(0,195,255,.3);font-family:var(--fb);font-size:10.5px;color:var(--cyan);white-space:nowrap;z-index:4}
@@ -208,7 +205,7 @@ html,body{cursor:auto}
 #s13{background:var(--dark)}
 #s13 .center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;position:relative;z-index:5;padding:0 48px;text-align:center}
 #s13 .big-title{font-family:var(--fh);font-size:clamp(64px,9vw,115px);font-weight:700;letter-spacing:14px;background:linear-gradient(90deg,var(--blue),var(--cyan) 30%,var(--purple) 70%,var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glowPulse 4s ease-in-out infinite}
-#s13 .cta-box{border:1px solid rgba(123,47,255,.5);background:rgba(13,24,40,.92);border-radius:18px;padding:24px 44px;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+#s13 .cta-box{border:1px solid rgba(123,47,255,.5);background:rgba(13,24,40,.92);border-radius:18px;padding:24px 44px;position:relative;overflow:hidden;backdrop-filter:blur(12px)}
 #s13 .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan) 33%,var(--purple) 66%,var(--magenta))}
 #s13 .cbadge{padding:10px 20px;border-radius:11px;border:1px solid var(--bc,var(--cyan));background:rgba(6,10,18,.8);font-family:var(--fb);font-size:11px;font-weight:700;color:var(--bc,var(--cyan));letter-spacing:1px;transition:all .35s;cursor:pointer}
 #s13 .cbadge:hover{background:var(--bc,var(--cyan));color:var(--dark);box-shadow:0 0 28px var(--bc,var(--cyan))}
@@ -398,7 +395,8 @@ html,body{cursor:auto}
 
 @media(max-width:768px){
   html,body{overflow-x:hidden;cursor:auto !important}
-  .cursor,  #lang-switch{top:8px;transform:translateX(-50%) scale(.9)}
+  .cursor,.cursor-trail{display:none !important}
+  #lang-switch{top:8px;transform:translateX(-50%) scale(.9)}
 
   /* Slides become scrollable */
   .slide{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
@@ -508,7 +506,7 @@ html,body{cursor:auto}
   #nav{bottom:10px;padding:6px 14px;gap:8px;border-radius:30px}
   #prev,#next{font-size:11px;padding:4px 10px}
   #snum{font-size:10px;min-width:36px}
-  
+
   /* Progress bar thicker */
   #prog{height:4px}
 }
@@ -526,65 +524,6 @@ html,body{cursor:auto}
   #s13>div:nth-child(5){padding:0 12px !important}
   [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr !important}
   #nav{bottom:6px;padding:5px 10px}
-  }
-
-/* ═══ MOBILE BROWSER FIXES ═══ */
-/* Safari safe area */
-@supports(padding:max(0px)){
-  #nav{padding-bottom:max(12px,env(safe-area-inset-bottom)) !important}
-  .slide{padding-bottom:env(safe-area-inset-bottom)}
-}
-
-/* Prevent iOS text resize */
-.slide *{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-
-/* Touch targets minimum 44px */
-@media(max-width:768px){
-      #prev,#next{min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center}
-  .lbtn{min-height:44px;padding:8px 18px !important}
-  
-  /* Prevent horizontal scroll */
-  .slide{max-width:100vw}
-  .slide>*{max-width:100%}
-  
-  /* Fix iOS momentum scroll */
-  .slide{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-  
-  /* Prevent zoom on input focus */
-  select,input,textarea{font-size:16px !important}
-  
-  /* Fix Safari flexbox min-height */
-  .slide{min-height:0;min-height:-webkit-fill-available}
-  
-  /* Force GPU compositing for smooth scroll */
-  .card,.card3d{-webkit-transform:translateZ(0);transform:translateZ(0)}
-  
-  /* Safe gradient text on mobile Safari */
-  .grad-text,.gold-text{-webkit-background-clip:text !important;background-clip:text !important}
-}
-
-/* Prevent overscroll bounce on iOS */
-@media(pointer:coarse){
-  body{overscroll-behavior:none}
-  #deck{height:100vh;height:100dvh}
-}
-
-/* High DPI screens */
-@media(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){
-  .gbar{height:3px}
-  #prog{height:2px}
-}
-
-
-/* Safari display:contents fix */
-@supports not (display:contents){
-  .stagger[style*="display:contents"]{display:flex;flex-direction:column;gap:12px}
-}
-
-/* Only hide cursor on devices with hover (mouse) */
-@media(hover:none){
-  html,body{cursor:auto !important}
-  *{cursor:auto !important}
 }
 </style>
 </head>
@@ -601,7 +540,7 @@ html,body{cursor:auto}
   <div class="bg-grid"></div>
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
-  <div id="dataStreams" style="position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;z-index:3"></div>
+  <div id="dataStreams" style="position:absolute;inset:0;pointer-events:none;z-index:3"></div>
   <div class="shead">
     <div class="logo">ZYN<span class="g">TRA</span></div>
     <div style="font-family:var(--fb);font-size:10px;letter-spacing:3px;color:var(--gray)">Q1 2026 · CONFIDENTIAL</div>
@@ -727,7 +666,7 @@ html,body{cursor:auto}
     </div>
     <!-- RIGHT: 3D animated broken/costly mine visualization -->
     <div style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 55% 50%,rgba(192,64,232,.08) 0%,rgba(30,111,255,.05) 40%,transparent 70%)">
-      <canvas id="problemMineCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1"></canvas>
+      <canvas id="problemMineCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
       <div style="position:absolute;top:14%;left:8%;z-index:5;padding:8px 13px;border-radius:10px;background:rgba(6,10,18,.92);border:1px solid rgba(192,64,232,.4);animation:float2 4s ease-in-out infinite;pointer-events:none">
         <div style="font-family:var(--fh);font-size:22px;font-weight:700;color:var(--magenta)">$15M</div>
         <div style="font-family:var(--fb);font-size:9px;letter-spacing:2px;color:var(--lgray);text-transform:uppercase">Avg Survey Cost</div>
@@ -830,7 +769,7 @@ html,body{cursor:auto}
     </div>
     <!-- RIGHT: AI orbital brain visualization -->
     <div style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 55% 50%,rgba(0,195,255,.06) 0%,rgba(123,47,255,.04) 40%,transparent 70%)">
-      <canvas id="aiOrbCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1"></canvas>
+      <canvas id="aiOrbCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
       <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;text-align:center;pointer-events:none">
         <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,rgba(0,195,255,.2),rgba(123,47,255,.2));border:2px solid rgba(0,195,255,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 0 60px rgba(0,195,255,.3),0 0 120px rgba(123,47,255,.2);animation:brainPulse 4s ease-in-out infinite">
           <div style="font-size:36px">🧠</div>
@@ -888,7 +827,7 @@ html,body{cursor:auto}
     </div>
     <!-- RIGHT: 3D Prospectivity pipeline viz -->
     <div style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 55% 50%,rgba(123,47,255,.07) 0%,rgba(0,195,255,.04) 40%,transparent 70%)">
-      <canvas id="prospectCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1"></canvas>
+      <canvas id="prospectCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
     </div>
   </div>
   <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
@@ -959,9 +898,9 @@ html,body{cursor:auto}
     <!-- RIGHT: 3D QASSAS Robot Canvas -->
     <div style="position:relative;overflow:hidden;min-height:100%;background:radial-gradient(ellipse at 55% 50%,rgba(0,195,255,.05) 0%,rgba(123,47,255,.04) 40%,transparent 75%)">
       <!-- WebGL 3D robot -->
-      <canvas id="qassas3D" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;cursor:grab;outline:none;z-index:1"></canvas>
+      <canvas id="qassas3D" style="position:absolute;inset:0;width:100%;height:100%;cursor:grab;outline:none;z-index:1"></canvas>
       <!-- 2D overlay for sensor labels + lines -->
-      <canvas id="sensorOverlay2D" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2"></canvas>
+      <canvas id="sensorOverlay2D" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2"></canvas>
       <!-- Sensor tooltip -->
       <!-- Sensor info card — large, beautiful, appears on hover -->
       <div id="sensorTooltip" style="
@@ -974,7 +913,7 @@ html,body{cursor:auto}
         min-width:340px;max-width:420px;
         z-index:30;
         pointer-events:none;
-        -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+        backdrop-filter:blur(16px);
         box-shadow:0 16px 48px rgba(0,0,0,0.7), 0 0 40px rgba(0,195,255,0.08);
         transition:opacity .25s ease;
       ">
@@ -3107,7 +3046,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
     <!-- RIGHT: Live Map -->
     <div style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,195,255,.2);box-shadow:0 0 40px rgba(0,195,255,.08)">
       <!-- Map header bar -->
-      <div style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(6,10,18,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,195,255,.15)">
+      <div style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(6,10,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,195,255,.15)">
         <div style="display:flex;align-items:center;gap:8px">
           <div style="width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s ease-in-out infinite"></div>
           <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:2px;color:var(--cyan);text-transform:uppercase">LIVE MAP</div>
@@ -3116,11 +3055,11 @@ setTimeout(()=&gt;{ resize(); }, 100);
       </div>
       <!-- Map iframe -->
       <div style="position:relative;width:100%;height:100%;background:#0A0E1A;overflow:hidden" id="wkMapWrap">
-<canvas id="wkCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;cursor:pointer"></canvas>
+<canvas id="wkCanvas" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer"></canvas>
 
 <!-- Popup overlay (hidden by default) -->
 <div id="wkPopup" style="display:none;position:absolute;z-index:50;pointer-events:auto;max-width:300px;min-width:260px">
-  <div style="background:rgba(6,10,18,.97);border:1px solid rgba(0,195,255,.3);border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)">
+  <div style="background:rgba(6,10,18,.97);border:1px solid rgba(0,195,255,.3);border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6);backdrop-filter:blur(12px)">
     <div id="wkPopHead" style="background:#1B2A4A;padding:8px 12px">
       <div id="wkPopId" style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px"></div>
       <div id="wkPopPri" style="font-size:10px;color:rgba(255,255,255,.7)"></div>
@@ -3261,14 +3200,7 @@ function draw(){
   ctx.textAlign="left";ctx.textBaseline="top";ctx.fillText("22.74°N",4,2);
 }
 
-function resize(){
-      var dpr=window.devicePixelRatio||1;
-      var w=wrap.clientWidth,h=wrap.clientHeight;
-      c.width=w*dpr;c.height=h*dpr;
-      c.style.width=w+'px';c.style.height=h+'px';
-      ctx.setTransform(dpr,0,0,dpr,0,0);
-      draw();
-    }
+function resize(){c.width=wrap.clientWidth;c.height=wrap.clientHeight;draw();}
 window.addEventListener("resize",resize);setTimeout(resize,120);
 
 // Click handler
@@ -3591,7 +3523,7 @@ c.addEventListener("click",function(e){
             </div>
             <div>
               <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);margin-bottom:2px">Mohammed Nabil</div>
-              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(0,195,255,.1);border:1px solid rgba(0,195,255,.3);color:var(--cyan);text-transform:uppercase">Co-Founder</div>
+              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(0,195,255,.1);border:1px solid rgba(0,195,255,.3);color:var(--cyan);text-transform:uppercase" id="s12-f1badge">Co-Founder</div>
               <div style="font-family:var(--fb);font-size:11px;color:var(--gray);margin-top:4px">📍 Riyadh, Saudi Arabia</div>
             </div>
           </div>
@@ -3619,7 +3551,7 @@ c.addEventListener("click",function(e){
             </div>
             <div>
               <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);margin-bottom:2px">Mohammed Noury</div>
-              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(123,47,255,.1);border:1px solid rgba(123,47,255,.3);color:var(--purple);text-transform:uppercase">Co-Founder</div>
+              <div style="display:inline-block;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:20px;background:rgba(123,47,255,.1);border:1px solid rgba(123,47,255,.3);color:var(--purple);text-transform:uppercase" id="s12-f2badge">Co-Founder</div>
               <div style="font-family:var(--fb);font-size:11px;color:var(--gray);margin-top:4px">📍 Riyadh, Saudi Arabia</div>
             </div>
           </div>
@@ -3675,7 +3607,7 @@ c.addEventListener("click",function(e){
     <div style="font-family:var(--fb);font-size:14px;letter-spacing:3px;color:var(--lgray)" id="s13-tagline">Powering Saudi Arabia's AI Future — From Data to Action</div>
 
     <!-- 4 Asks Box -->
-    <div style="width:100%;max-width:900px;border:1px solid rgba(212,168,67,.3);background:rgba(13,24,40,.92);border-radius:14px;padding:18px 24px;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)">
+    <div style="width:100%;max-width:900px;border:1px solid rgba(212,168,67,.3);background:rgba(13,24,40,.92);border-radius:14px;padding:18px 24px;position:relative;overflow:hidden;backdrop-filter:blur(12px)">
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--cyan) 50%,var(--purple))"></div>
       <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;text-align:center" id="s13-askh">Our Request</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
@@ -3707,7 +3639,7 @@ c.addEventListener("click",function(e){
     <div class="cta-box" style="width:100%;max-width:900px">
       <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--white);margin-bottom:6px" id="s13-ctah">Series A Funding Round &nbsp;·&nbsp; $15M Target &nbsp;·&nbsp; Seeking Strategic &amp; Government Partners</div>
       <div style="font-family:var(--fb);font-size:11px;color:var(--cyan);letter-spacing:2px" id="s13-ctas">DEEP TECHNOLOGY &nbsp;·&nbsp; VISION 2030 ALIGNED &nbsp;·&nbsp; SAUDI-FOUNDED &nbsp;·&nbsp; SERIES A OPEN</div>
-      <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:5px" id="s13-ctac"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2b1bdbca6b3b1a692a8abbca6a0b3fcb1bdbffca1b3">[email&#160;protected]</a> &nbsp;·&nbsp; www.zyntra.com.sa &nbsp;·&nbsp; Riyadh, Saudi Arabia</div>
+      <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:5px" id="s13-ctac"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cefe3e2f8edeff8ccf6f5e2f8feeda2efe3e1a2ffed">[email&#160;protected]</a> &nbsp;·&nbsp; www.zyntra.com.sa &nbsp;·&nbsp; Riyadh, Saudi Arabia</div>
     </div>
 
     <!-- Badges -->
@@ -3723,14 +3655,14 @@ c.addEventListener("click",function(e){
 
 <!-- NAV -->
 <div id="nav">
-  <button id="prev" aria-label="Previous slide">&#9664; PREV</button>
+  <button id="prev" aria-label="Previous">‹</button>
   <div id="snum">01 / 20</div>
-  <button id="next" aria-label="Next slide">NEXT &#9654;</button>
+  <button id="next" aria-label="Next">›</button>
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ══════════════════════════════════════════════════════
-// NAVIGATION — Clean, no dots, no cursor
+// NAVIGATION
 // ══════════════════════════════════════════════════════
 var cur=0, tot=20;
 var slides=document.querySelectorAll('.slide');
@@ -3782,32 +3714,18 @@ function triggerTraction(){
   });
 }
 
-// Button clicks
 document.getElementById('prev').addEventListener('click',function(e){e.preventDefault();e.stopPropagation();goTo(cur-1);});
 document.getElementById('next').addEventListener('click',function(e){e.preventDefault();e.stopPropagation();goTo(cur+1);});
-
-// Keyboard
 document.addEventListener('keydown',function(e){
   if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();goTo(cur+1);}
   if(e.key==='ArrowLeft'){e.preventDefault();goTo(cur-1);}
 });
-
-// Touch swipe — simple and reliable
-var _tx=0,_ty=0,_swiping=false;
-document.addEventListener('touchstart',function(e){
-  _tx=e.touches[0].clientX;
-  _ty=e.touches[0].clientY;
-  _swiping=true;
-},{passive:true});
+var _tx=0,_ty=0;
+document.addEventListener('touchstart',function(e){_tx=e.touches[0].clientX;_ty=e.touches[0].clientY;},{passive:true});
 document.addEventListener('touchend',function(e){
-  if(!_swiping) return;
-  _swiping=false;
   var dx=e.changedTouches[0].clientX-_tx;
   var dy=e.changedTouches[0].clientY-_ty;
-  // Only trigger if horizontal swipe > 60px and more horizontal than vertical
-  if(Math.abs(dx)>60 && Math.abs(dx)>Math.abs(dy)*1.5){
-    goTo(dx<0?cur+1:cur-1);
-  }
+  if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5) goTo(dx<0?cur+1:cur-1);
 },{passive:true});
 
 // Data streams (slide 1)
@@ -4814,7 +4732,7 @@ function setupCanvas(id){
 (function(){
   var canvas = document.createElement('canvas');
   canvas.id = 'closingBg';
-  canvas.style.cssText = 'position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
   var s13 = document.getElementById('s13');
   if (!s13) return;
   s13.appendChild(canvas);
@@ -6716,29 +6634,6 @@ function setupCanvas(id){
   draw();
 })();
 
-
-// ═══ PERFORMANCE: Pause animations when tab not visible ═══
-(function(){
-  var _rafCallbacks = [];
-  document.addEventListener('visibilitychange', function(){
-    // When tab hidden, canvases will naturally pause via rAF
-  });
-  // Intersection observer to pause off-screen canvas animations
-  if(window.IntersectionObserver){
-    var canvases = document.querySelectorAll('canvas');
-    var obs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        e.target._visible = e.isIntersecting;
-      });
-    },{threshold:0.1});
-    canvases.forEach(function(c){c._visible=true;obs.observe(c);});
-  }
-})();
-
-// ═══ iOS bounce prevention ═══
-document.body.addEventListener('touchmove',function(e){
-  if(!e.target.closest('.slide') && !e.target.closest('#lang-switch') && !e.target.closest('#nav')){e.preventDefault();}
-},{passive:false});
 </script>
 
 <script>
@@ -6902,10 +6797,10 @@ var D = {
 
   s12_label:'19 / المؤسسون', s12_big:'تعرّف على المؤسسين',
   s12_sub:'بنت زينترا على يد مؤسسَين يجمعان خبرات الذكاء الاصطناعي وتقنية الحكومة والأنظمة المستقلة — مهمة مشتركة لبناء تقنية عميقة من المملكة',
-  s12_f1t:'المؤسس المشارك', s12_f1loc:'📍 الرياض، المملكة العربية السعودية',
+  s12_f1t:'شريك مؤسس', s12_f1loc:'📍 الرياض، المملكة العربية السعودية',
   s12_f1b1:'محمد نبيل مواطن مغربي وُلد في المملكة العربية السعودية 🇸🇦. هو العقل المدبر وراء رؤية زينترا وموقعها في السوق وبناء تحالفاتها.',
   s12_f1b2:'يقود التوجه الاستراتيجي للشركة وتموضعها في السوق واستراتيجية الشراكات وإشراك أصحاب المصلحة.',
-  s12_f2t:'المؤسس المشارك', s12_f2loc:'📍 الرياض، المملكة العربية السعودية',
+  s12_f2t:'شريك مؤسس', s12_f2loc:'📍 الرياض، المملكة العربية السعودية',
   s12_f2b1:'محمد نوري مواطن سوداني وُلد في المملكة العربية السعودية 🇸🇦. يقود البنية التقنية لزينترا وعمليات الروبوتات وقسم الذكاء الاصطناعي.',
   s12_f2b2:'يمتلك أكثر من 10 سنوات من الخبرة في تصميم وتسليم منصات حكومية واسعة النطاق وأنظمة بيانات وبنى تحتية للذكاء الاصطناعي.',
   s12_adv:'شبكة المستشارين',
@@ -7327,19 +7222,20 @@ function slide12(ar){
   /* ── Founder name / title / location ── */
   var cards = qa('#s12 .card.card3d');
   if(cards[0]){
-    sw(qIn(cards[0],'[style*="font-size:13px"][style*="font-weight:700"]'), ar, D.s12_f1t);
     qaIn(cards[0],'[style*="font-size:11px"]').forEach(function(p){
       var t=(p.getAttribute('data-i18n-orig')||p.textContent).trim();
       if(t.indexOf('📍')>=0) sw(p, ar, D.s12_f1loc);
     });
   }
   if(cards[1]){
-    sw(qIn(cards[1],'[style*="font-size:13px"][style*="font-weight:700"]'), ar, D.s12_f2t);
     qaIn(cards[1],'[style*="font-size:11px"]').forEach(function(p){
       var t=(p.getAttribute('data-i18n-orig')||p.textContent).trim();
       if(t.indexOf('📍')>=0) sw(p, ar, D.s12_f2loc);
     });
   }
+  /* ── Co-Founder badges ── */
+  sw(q('#s12-f1badge'), ar, D.s12_f1t);
+  sw(q('#s12-f2badge'), ar, D.s12_f2t);
 
   /* ── Advisory heading ── */
   qa('#s12 div').forEach(function(d){
@@ -7348,8 +7244,8 @@ function slide12(ar){
     if(t==='Advisory Network'||t==='شبكة المستشارين') sw(d, ar, D.s12_adv);
   });
 
-  /* ── Advisory tags ── */
-  var advItems = qa('#s12 [style*="border-radius:20px"][style*="font-size:10px"]');
+  /* ── Advisory tags — match by padding unique to advisory spans ── */
+  var advItems = qa('#s12 span[style*="padding:5px 12px"]');
   ['s12_adv1','s12_adv2','s12_adv3','s12_adv4','s12_adv5','s12_adv6','s12_adv7','s12_adv8'].forEach(function(k,i){
     sw(advItems[i]||null, ar, D[k]);
   });
