@@ -528,7 +528,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 </style>
 </head>
 <body>
-<div id="lang-switch"><button class="lbtn active" id="lbtn-en">EN</button><button class="lbtn" id="lbtn-ar">AR</button></div>
+<div id="lang-switch"><button type="button" class="lbtn active" id="lbtn-en">EN</button><button type="button" class="lbtn" id="lbtn-ar">AR</button></div>
 <div id="prog" style="width:7.7%"></div>
 <div id="deck">
 
@@ -3655,9 +3655,9 @@ c.addEventListener("click",function(e){
 
 <!-- NAV -->
 <div id="nav">
-  <button id="prev" aria-label="Previous">‹</button>
+  <button type="button" id="prev" aria-label="Previous">‹</button>
   <div id="snum">01 / 20</div>
-  <button id="next" aria-label="Next">›</button>
+  <button type="button" id="next" aria-label="Next">›</button>
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -7458,8 +7458,8 @@ window.setDeckLang = function(lang){
   function wire(){
     var en = document.getElementById('lbtn-en');
     var ar = document.getElementById('lbtn-ar');
-    if(en) en.addEventListener('click', function(){ window.setDeckLang('en'); });
-    if(ar) ar.addEventListener('click', function(){ window.setDeckLang('ar'); });
+    if(en) en.addEventListener('click', function(e){ e.preventDefault(); window.setDeckLang('en'); });
+    if(ar) ar.addEventListener('click', function(e){ e.preventDefault(); window.setDeckLang('ar'); });
   }
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', wire);
