@@ -15,14 +15,14 @@
   --white:#fff;--gray:#8899BB;--lgray:#AAB8CC;
   --fh:'Rajdhani',sans-serif;--fb:'Exo 2',sans-serif;
 }
-html,body{width:100%;height:100%;overflow:hidden;background:#000;cursor:none}
+html,body{width:100%;height:100%;height:100dvh;overflow:hidden;background:#000;cursor:none;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 body{font-family:var(--fb)}
 
 
 /* ══ LANG SWITCH ══ */
 #lang-switch{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;
   background:rgba(6,10,18,.92);border:1px solid rgba(0,195,255,.3);
-  border-radius:30px;padding:3px;backdrop-filter:blur(16px);
+  border-radius:30px;padding:3px;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
   box-shadow:0 4px 24px rgba(0,0,0,.5);}
 .lbtn{background:none;border:none;outline:none;cursor:pointer;
   font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;
@@ -47,15 +47,15 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 
 /* ── DECK ── */
 #deck{width:100vw;height:100vh;position:relative;overflow:hidden}
-.slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .65s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;background:var(--navy);overflow:hidden}
+.slide{position:absolute;top:0;right:0;bottom:0;left:0;opacity:0;pointer-events:none;transition:opacity .65s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;background:var(--navy);overflow:hidden}
 .slide.active{opacity:1;pointer-events:all}
 
 /* ── GRAD BAR ── */
 .gbar{height:4px;width:100%;flex-shrink:0;position:relative;z-index:10;background:linear-gradient(90deg,var(--blue),var(--cyan) 33%,var(--purple) 66%,var(--magenta))}
-.gbar::after{content:'';position:absolute;inset:0;background:inherit;filter:blur(6px);opacity:.5}
+.gbar::after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:inherit;filter:blur(6px);opacity:.5}
 
 /* ── NAV ── */
-#nav{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;z-index:100;background:rgba(6,10,18,.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:50px;padding:8px 20px}
+#nav{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;z-index:100;background:rgba(6,10,18,.88);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:50px;padding:8px 20px}
 .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;border:none;outline:none;transition:all .3s}
 .dot.active{background:var(--cyan);transform:scale(1.5);box-shadow:0 0 8px var(--cyan)}
 #prev,#next{background:none;border:1px solid rgba(255,255,255,.12);color:var(--lgray);font-family:var(--fh);font-size:12px;letter-spacing:2px;padding:5px 13px;border-radius:20px;cursor:pointer;transition:all .3s;outline:none}
@@ -72,7 +72,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 .slabel.gold{color:var(--gold)}
 
 /* ── BG ELEMENTS ── */
-.bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,195,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,195,255,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 8s linear infinite;pointer-events:none}
+.bg-grid{position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(rgba(0,195,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,195,255,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 8s linear infinite;pointer-events:none}
 @keyframes gridMove{0%{transform:translateY(0)}100%{transform:translateY(60px)}}
 
 .orb{position:absolute;border-radius:50%;pointer-events:none}
@@ -144,7 +144,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 #s4 .qleft{padding:18px 32px 24px 48px;display:flex;flex-direction:column;gap:12px;position:relative;z-index:5}
 #s4 .qtitle{font-family:var(--fh);font-size:66px;font-weight:700;letter-spacing:8px;color:var(--white);line-height:1}
 #s4 .qright{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-#s4 .robot-bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,195,255,.14) 0%,rgba(123,47,255,.08) 40%,transparent 70%)}
+#s4 .robot-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:radial-gradient(circle at 50% 50%,rgba(0,195,255,.14) 0%,rgba(123,47,255,.08) 40%,transparent 70%)}
 #s4 .rimg{width:86%;max-height:100%;object-fit:contain;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 0 50px rgba(0,195,255,.5)) drop-shadow(0 0 100px rgba(123,47,255,.3));position:relative;z-index:2}
 #s4 .scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,195,255,.7),transparent);animation:scanLine 3s linear infinite;z-index:3}
 #s4 .sbadge{position:absolute;padding:7px 11px;border-radius:9px;background:rgba(6,10,18,.92);border:1px solid rgba(0,195,255,.3);font-family:var(--fb);font-size:10.5px;color:var(--cyan);white-space:nowrap;z-index:4}
@@ -211,7 +211,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 #s13{background:var(--dark)}
 #s13 .center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;position:relative;z-index:5;padding:0 48px;text-align:center}
 #s13 .big-title{font-family:var(--fh);font-size:clamp(64px,9vw,115px);font-weight:700;letter-spacing:14px;background:linear-gradient(90deg,var(--blue),var(--cyan) 30%,var(--purple) 70%,var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glowPulse 4s ease-in-out infinite}
-#s13 .cta-box{border:1px solid rgba(123,47,255,.5);background:rgba(13,24,40,.92);border-radius:18px;padding:24px 44px;position:relative;overflow:hidden;backdrop-filter:blur(12px)}
+#s13 .cta-box{border:1px solid rgba(123,47,255,.5);background:rgba(13,24,40,.92);border-radius:18px;padding:24px 44px;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 #s13 .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan) 33%,var(--purple) 66%,var(--magenta))}
 #s13 .cbadge{padding:10px 20px;border-radius:11px;border:1px solid var(--bc,var(--cyan));background:rgba(6,10,18,.8);font-family:var(--fb);font-size:11px;font-weight:700;color:var(--bc,var(--cyan));letter-spacing:1px;transition:all .35s;cursor:pointer}
 #s13 .cbadge:hover{background:var(--bc,var(--cyan));color:var(--dark);box-shadow:0 0 28px var(--bc,var(--cyan))}
@@ -537,6 +537,67 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   #nav{bottom:6px;padding:5px 10px}
   .dot{width:4px;height:4px}
 }
+
+/* ═══ MOBILE BROWSER FIXES ═══ */
+/* Safari safe area */
+@supports(padding:max(0px)){
+  #nav{padding-bottom:max(12px,env(safe-area-inset-bottom)) !important}
+  .slide{padding-bottom:env(safe-area-inset-bottom)}
+}
+
+/* Prevent iOS text resize */
+.slide *{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+/* Touch targets minimum 44px */
+@media(max-width:768px){
+  .dot{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+  .dot::after{content:'';width:9px;height:9px;border-radius:50%;background:inherit}
+  #prev,#next{min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center}
+  .lbtn{min-height:44px;padding:8px 18px !important}
+  
+  /* Prevent horizontal scroll */
+  .slide{max-width:100vw}
+  .slide>*{max-width:100%}
+  
+  /* Fix iOS momentum scroll */
+  .slide{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+  
+  /* Prevent zoom on input focus */
+  select,input,textarea{font-size:16px !important}
+  
+  /* Fix Safari flexbox min-height */
+  .slide{min-height:0;min-height:-webkit-fill-available}
+  
+  /* Force GPU compositing for smooth scroll */
+  .card,.card3d{-webkit-transform:translateZ(0);transform:translateZ(0)}
+  
+  /* Safe gradient text on mobile Safari */
+  .grad-text,.gold-text{-webkit-background-clip:text !important;background-clip:text !important}
+}
+
+/* Prevent overscroll bounce on iOS */
+@media(pointer:coarse){
+  body{overscroll-behavior:none}
+  #deck{height:100vh;height:100dvh}
+}
+
+/* High DPI screens */
+@media(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){
+  .gbar{height:3px}
+  #prog{height:2px}
+}
+
+
+/* Safari display:contents fix */
+@supports not (display:contents){
+  .stagger[style*="display:contents"]{display:flex;flex-direction:column;gap:12px}
+}
+
+/* Only hide cursor on devices with hover (mouse) */
+@media(hover:none){
+  html,body{cursor:auto !important}
+  *{cursor:auto !important}
+}
 </style>
 </head>
 <body>
@@ -554,7 +615,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   <div class="bg-grid"></div>
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
-  <div id="dataStreams" style="position:absolute;inset:0;pointer-events:none;z-index:3"></div>
+  <div id="dataStreams" style="position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;z-index:3"></div>
   <div class="shead">
     <div class="logo">ZYN<span class="g">TRA</span></div>
     <div style="font-family:var(--fb);font-size:10px;letter-spacing:3px;color:var(--gray)">Q1 2026 · CONFIDENTIAL</div>
@@ -575,8 +636,8 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
         </div>
         <div style="width:1px;background:rgba(255,255,255,.08)"></div>
         <div style="text-align:center">
-          <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--purple)"><span class="count-num" data-target="0.87" data-dec="2" data-dur="1800">0.87</span></div>
-          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase"><span class="count-num" data-target="0.87" data-prefix="AUC-ROC " data-dec="2" data-dur="1600">AUC-ROC</span></div>
+          <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--purple)"><span class="count-num" data-target="67" data-suffix="%" data-dur="1800">67%</span></div>
+          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase">AI Discovery Rate</div>
         </div>
         <div style="width:1px;background:rgba(255,255,255,.08)"></div>
         <div style="text-align:center">
@@ -680,7 +741,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
     </div>
     <!-- RIGHT: 3D animated broken/costly mine visualization -->
     <div style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 55% 50%,rgba(192,64,232,.08) 0%,rgba(30,111,255,.05) 40%,transparent 70%)">
-      <canvas id="problemMineCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
+      <canvas id="problemMineCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1"></canvas>
       <div style="position:absolute;top:14%;left:8%;z-index:5;padding:8px 13px;border-radius:10px;background:rgba(6,10,18,.92);border:1px solid rgba(192,64,232,.4);animation:float2 4s ease-in-out infinite;pointer-events:none">
         <div style="font-family:var(--fh);font-size:22px;font-weight:700;color:var(--magenta)">$15M</div>
         <div style="font-family:var(--fb);font-size:9px;letter-spacing:2px;color:var(--lgray);text-transform:uppercase">Avg Survey Cost</div>
@@ -722,7 +783,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
           <div style="font-family:var(--fh);font-size:38px;font-weight:700;color:var(--cyan);opacity:.2;line-height:1">02</div>
           <div style="font-size:24px;margin-top:-6px">🧠</div>
           <div style="font-family:var(--fh);font-size:16px;font-weight:700;color:var(--white)">AI Platforms</div>
-          <div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray);line-height:1.6;flex:1">A proprietary ensemble of domain-trained models: U-Net CNNs for multi-spectral image segmentation, Graph Attention Networks for structural geology interpretation, and XGBoost for geochemical anomaly detection. The ensemble achieves AUC-ROC 0.87 — versus 0.72 for conventional targeting — improving discovery hit rates by 67% and cutting cost-per-discovery by 66%.</div>
+          <div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray);line-height:1.6;flex:1">A proprietary multi-model AI engine combining three complementary analysis layers: QASSAS satellite analysis for mineral alteration detection across vast terrain, QASSAS structural analysis for geological fault network interpretation, and QASSAS geochemical analysis for pathfinder element pattern recognition. Together, these layers improve discovery hit rates by 67% and cut cost-per-discovery by 66% compared to conventional exploration methods.</div>
           <div style="font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--cyan);text-transform:uppercase">Deep Learning · MLOps</div>
         </div>
         <div class="card card3d" style="padding:20px 16px;display:flex;flex-direction:column;gap:9px;border-top:3px solid var(--purple)">
@@ -778,12 +839,12 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
         <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(0,195,255,.35)';this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''"><div style="width:7px;height:7px;border-radius:50%;background:var(--cyan);flex-shrink:0;box-shadow:0 0 8px var(--cyan)"></div><div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray)"><b style="color:var(--white)">Focus on the most promising targets</b> — AI pre-ranks zones by mineralization probability</div></div>
         <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(123,47,255,.35)';this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''"><div style="width:7px;height:7px;border-radius:50%;background:var(--purple);flex-shrink:0;box-shadow:0 0 8px var(--purple)"></div><div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray)"><b style="color:var(--white)">Reduce exploration costs by up to 66%</b> — from $15M to under $400K for equivalent coverage</div></div>
         <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(212,168,67,.35)';this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''"><div style="width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;box-shadow:0 0 8px var(--gold)"></div><div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray)"><b style="color:var(--white)">Accelerate discovery timelines</b> — from 24 months to 8 weeks for full regional surveys</div></div>
-        <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(30,111,255,.35)';this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''"><div style="width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;box-shadow:0 0 8px var(--blue)"></div><div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray)"><b style="color:var(--white)">Increase discovery hit rates by 67%</b> — AUC-ROC 0.87 vs 0.72 for conventional targeting</div></div>
+        <div style="display:flex;align-items:center;gap:11px;padding:9px 14px;border-radius:11px;background:rgba(13,24,40,.8);border:1px solid rgba(255,255,255,.07);transition:all .3s" onmouseover="this.style.borderColor='rgba(30,111,255,.35)';this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.transform=''"><div style="width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;box-shadow:0 0 8px var(--blue)"></div><div style="font-family:var(--fb);font-size:11.5px;color:var(--lgray)"><b style="color:var(--white)">Increase discovery hit rates by 67%</b> — QASSAS multi-model AI vs conventional targeting methods</div></div>
       </div>
     </div>
     <!-- RIGHT: AI orbital brain visualization -->
     <div style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 55% 50%,rgba(0,195,255,.06) 0%,rgba(123,47,255,.04) 40%,transparent 70%)">
-      <canvas id="aiOrbCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
+      <canvas id="aiOrbCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1"></canvas>
       <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;text-align:center;pointer-events:none">
         <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,rgba(0,195,255,.2),rgba(123,47,255,.2));border:2px solid rgba(0,195,255,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 0 60px rgba(0,195,255,.3),0 0 120px rgba(123,47,255,.2);animation:brainPulse 4s ease-in-out infinite">
           <div style="font-size:36px">🧠</div>
@@ -841,7 +902,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
     </div>
     <!-- RIGHT: 3D Prospectivity pipeline viz -->
     <div style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 55% 50%,rgba(123,47,255,.07) 0%,rgba(0,195,255,.04) 40%,transparent 70%)">
-      <canvas id="prospectCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
+      <canvas id="prospectCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1"></canvas>
     </div>
   </div>
   <div class="gbar" style="position:absolute;bottom:0;left:0;right:0"></div>
@@ -912,9 +973,9 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
     <!-- RIGHT: 3D QASSAS Robot Canvas -->
     <div style="position:relative;overflow:hidden;min-height:100%;background:radial-gradient(ellipse at 55% 50%,rgba(0,195,255,.05) 0%,rgba(123,47,255,.04) 40%,transparent 75%)">
       <!-- WebGL 3D robot -->
-      <canvas id="qassas3D" style="position:absolute;inset:0;width:100%;height:100%;cursor:grab;outline:none;z-index:1"></canvas>
+      <canvas id="qassas3D" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;cursor:grab;outline:none;z-index:1"></canvas>
       <!-- 2D overlay for sensor labels + lines -->
-      <canvas id="sensorOverlay2D" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2"></canvas>
+      <canvas id="sensorOverlay2D" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2"></canvas>
       <!-- Sensor tooltip -->
       <!-- Sensor info card — large, beautiful, appears on hover -->
       <div id="sensorTooltip" style="
@@ -927,7 +988,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
         min-width:340px;max-width:420px;
         z-index:30;
         pointer-events:none;
-        backdrop-filter:blur(16px);
+        -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
         box-shadow:0 16px 48px rgba(0,0,0,0.7), 0 0 40px rgba(0,195,255,0.08);
         transition:opacity .25s ease;
       ">
@@ -2736,9 +2797,9 @@ setTimeout(()=&gt;{ resize(); }, 100);
       <div class="big-h">Proof of <span class="grad-text">Performance</span></div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
         <div class="card card3d" style="padding:18px 12px;text-align:center;border-top:3px solid transparent;border-image:linear-gradient(90deg,var(--cyan),var(--blue)) 1">
-          <div class="statnum" data-target="0.87" data-dec="2" style="font-family:var(--fh);font-size:46px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent"><span class="count-num" data-target="0.87" data-dec="2" data-dur="1800">0.87</span></div>
-          <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--white);margin-top:4px"><span class="count-num" data-target="0.87" data-prefix="AUC-ROC " data-dec="2" data-dur="1600">AUC-ROC</span></div>
-          <div style="font-family:var(--fb);font-size:10.5px;color:var(--gray);margin-top:4px;line-height:1.4">AI accuracy vs<br>0.72 industry avg</div>
+          <div class="statnum" data-target="67" data-suffix="%" style="font-family:var(--fh);font-size:46px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent"><span class="count-num" data-target="67" data-suffix="%" data-dur="1800">67%</span></div>
+          <div style="font-family:var(--fh);font-size:13px;font-weight:700;color:var(--white);margin-top:4px">AI Discovery Rate</div>
+          <div style="font-family:var(--fb);font-size:10.5px;color:var(--gray);margin-top:4px;line-height:1.4">vs 15–20%<br>traditional methods</div>
         </div>
         <div class="card card3d" style="padding:18px 12px;text-align:center">
           <div class="statnum" data-target="67" data-suffix="%" style="font-family:var(--fh);font-size:46px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--purple),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent"><span class="count-num" data-target="67" data-suffix="%" data-dur="1600">67%</span></div>
@@ -2919,7 +2980,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
             <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);display:flex;flex-direction:column;gap:5px">
               <div>100 km² pilot on Arabian-Nubian Shield</div>
               <div>Deploy 2 QASSAS prototype units in field</div>
-              <div>Validate AI model AUC-ROC ≥ 0.85 in field</div>
+              <div>Validate QASSAS AI accuracy in field deployment</div>
               <div>Close $15M Series A funding round</div>
               <div style="font-family:var(--fb);font-size:10px;color:rgba(136,153,187,0.65);margin-top:6px;line-height:1.5">Use of funds: 40% R&amp;D, 30% QASSAS production, 20% sales &amp; BD, 10% ops</div>
             </div>
@@ -3060,7 +3121,7 @@ setTimeout(()=&gt;{ resize(); }, 100);
     <!-- RIGHT: Live Map -->
     <div style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,195,255,.2);box-shadow:0 0 40px rgba(0,195,255,.08)">
       <!-- Map header bar -->
-      <div style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(6,10,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,195,255,.15)">
+      <div style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(6,10,18,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,195,255,.15)">
         <div style="display:flex;align-items:center;gap:8px">
           <div style="width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s ease-in-out infinite"></div>
           <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:2px;color:var(--cyan);text-transform:uppercase">LIVE MAP</div>
@@ -3069,11 +3130,11 @@ setTimeout(()=&gt;{ resize(); }, 100);
       </div>
       <!-- Map iframe -->
       <div style="position:relative;width:100%;height:100%;background:#0A0E1A;overflow:hidden" id="wkMapWrap">
-<canvas id="wkCanvas" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer"></canvas>
+<canvas id="wkCanvas" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;cursor:pointer"></canvas>
 
 <!-- Popup overlay (hidden by default) -->
 <div id="wkPopup" style="display:none;position:absolute;z-index:50;pointer-events:auto;max-width:300px;min-width:260px">
-  <div style="background:rgba(6,10,18,.97);border:1px solid rgba(0,195,255,.3);border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6);backdrop-filter:blur(12px)">
+  <div style="background:rgba(6,10,18,.97);border:1px solid rgba(0,195,255,.3);border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)">
     <div id="wkPopHead" style="background:#1B2A4A;padding:8px 12px">
       <div id="wkPopId" style="font-family:Rajdhani,sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px"></div>
       <div id="wkPopPri" style="font-size:10px;color:rgba(255,255,255,.7)"></div>
@@ -3214,7 +3275,14 @@ function draw(){
   ctx.textAlign="left";ctx.textBaseline="top";ctx.fillText("22.74°N",4,2);
 }
 
-function resize(){c.width=wrap.clientWidth;c.height=wrap.clientHeight;draw();}
+function resize(){
+      var dpr=window.devicePixelRatio||1;
+      var w=wrap.clientWidth,h=wrap.clientHeight;
+      c.width=w*dpr;c.height=h*dpr;
+      c.style.width=w+'px';c.style.height=h+'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      draw();
+    }
 window.addEventListener("resize",resize);setTimeout(resize,120);
 
 // Click handler
@@ -3621,7 +3689,7 @@ c.addEventListener("click",function(e){
     <div style="font-family:var(--fb);font-size:14px;letter-spacing:3px;color:var(--lgray)" id="s13-tagline">Powering Saudi Arabia's AI Future — From Data to Action</div>
 
     <!-- 4 Asks Box -->
-    <div style="width:100%;max-width:900px;border:1px solid rgba(212,168,67,.3);background:rgba(13,24,40,.92);border-radius:14px;padding:18px 24px;position:relative;overflow:hidden;backdrop-filter:blur(12px)">
+    <div style="width:100%;max-width:900px;border:1px solid rgba(212,168,67,.3);background:rgba(13,24,40,.92);border-radius:14px;padding:18px 24px;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)">
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--cyan) 50%,var(--purple))"></div>
       <div style="font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;text-align:center" id="s13-askh">Our Request</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
@@ -3653,7 +3721,7 @@ c.addEventListener("click",function(e){
     <div class="cta-box" style="width:100%;max-width:900px">
       <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--white);margin-bottom:6px" id="s13-ctah">Series A Funding Round &nbsp;·&nbsp; $15M Target &nbsp;·&nbsp; Seeking Strategic &amp; Government Partners</div>
       <div style="font-family:var(--fb);font-size:11px;color:var(--cyan);letter-spacing:2px" id="s13-ctas">DEEP TECHNOLOGY &nbsp;·&nbsp; VISION 2030 ALIGNED &nbsp;·&nbsp; SAUDI-FOUNDED &nbsp;·&nbsp; SERIES A OPEN</div>
-      <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:5px" id="s13-ctac">contact@zyntra.com.sa &nbsp;·&nbsp; www.zyntra.com.sa &nbsp;·&nbsp; Riyadh, Saudi Arabia</div>
+      <div style="font-family:var(--fb);font-size:11px;color:var(--lgray);margin-top:5px" id="s13-ctac"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2b1bdbca6b3b1a692a8abbca6a0b3fcb1bdbffca1b3">[email&#160;protected]</a> &nbsp;·&nbsp; www.zyntra.com.sa &nbsp;·&nbsp; Riyadh, Saudi Arabia</div>
     </div>
 
     <!-- Badges -->
@@ -3675,7 +3743,7 @@ c.addEventListener("click",function(e){
   <button id="next">&#9654;</button>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ══════════════════════════════════════════════════════
 // NAVIGATION
 // ══════════════════════════════════════════════════════
@@ -3746,7 +3814,7 @@ document.addEventListener('keydown',function(e){
 });
 var tx=0;
 document.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-document.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)goTo(dx<0?cur+1:cur-1);});
+document.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)goTo(dx<0?cur+1:cur-1);},{passive:true});
 
 // Cursor
 var cursor=document.getElementById('cursor');
@@ -4762,7 +4830,7 @@ function setupCanvas(id){
 (function(){
   var canvas = document.createElement('canvas');
   canvas.id = 'closingBg';
-  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1';
+  canvas.style.cssText = 'position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1';
   var s13 = document.getElementById('s13');
   if (!s13) return;
   s13.appendChild(canvas);
@@ -6664,6 +6732,29 @@ function setupCanvas(id){
   draw();
 })();
 
+
+// ═══ PERFORMANCE: Pause animations when tab not visible ═══
+(function(){
+  var _rafCallbacks = [];
+  document.addEventListener('visibilitychange', function(){
+    // When tab hidden, canvases will naturally pause via rAF
+  });
+  // Intersection observer to pause off-screen canvas animations
+  if(window.IntersectionObserver){
+    var canvases = document.querySelectorAll('canvas');
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        e.target._visible = e.isIntersecting;
+      });
+    },{threshold:0.1});
+    canvases.forEach(function(c){c._visible=true;obs.observe(c);});
+  }
+})();
+
+// ═══ iOS bounce prevention ═══
+document.body.addEventListener('touchmove',function(e){
+  if(!e.target.closest('.slide') && !e.target.closest('#lang-switch') && !e.target.closest('#nav')){e.preventDefault();}
+},{passive:false});
 </script>
 
 <script>
@@ -6733,7 +6824,7 @@ var D = {
   s3_sub:'زينترا هي المنصة الوحيدة في المملكة التي تغطي سلسلة قيمة الذكاء الاصطناعي بالكامل في نظام سيادي سحابي واحد متكامل',
   s3_c1h:'استخبارات البيانات', s3_c1b:'بحيرة بيانات ثلاثية الطبقات تستوعب أكثر من 50 نوع بيانات من أقمار صناعية وليدار وعينات جيوكيميائية ومسوحات جيوفيزيائية وتدفقات مستشعرات قصاص.',
   s3_c1t:'بحيرات البيانات · PostGIS · Kafka',
-  s3_c2h:'منصات الذكاء الاصطناعي', s3_c2b:'نماذج مُدرَّبة على المجال: شبكات U-Net CNN وشبكات انتباه الرسم البياني وXGBoost. تحقق AUC-ROC 0.87 مقابل 0.72 للطرق التقليدية.',
+  s3_c2h:'منصات الذكاء الاصطناعي', s3_c2b:'محرك ذكاء اصطناعي متعدد النماذج يجمع بين التحليل الفضائي والتحليل البنيوي والتحليل الجيوكيميائي — يحسّن معدلات نجاح الاكتشاف بنسبة 67% ويخفض تكلفة الاكتشاف بنسبة 66%.',
   s3_c2t:'التعلم العميق · MLOps',
   s3_c3h:'الأنظمة المستقلة', s3_c3b:'روبوت قصاص رباعي القوائم 12-DOF بحمولة تحليلية كاملة يعمل عبر ROS 2 وSLAM. وحدة واحدة تُحل محل فريق من 15 شخصاً.',
   s3_c3t:'ROS2 · Edge AI · SLAM',
@@ -6813,7 +6904,7 @@ var D = {
   s11_label:'14 / خارطة الطريق', s11_big:'المسار نحو الحجم العالمي',
   s11_p1b:'المرحلة 1 · الآن', s11_p1h:'التحقق من النموذج الأولي',
   s11_p1_1:'تجربة 100 كم² على الدرع العربي النوبي', s11_p1_2:'نشر وحدتين نموذجيتين من قصاص في الميدان',
-  s11_p1_3:'التحقق من نموذج AI AUC-ROC ≥ 0.85 في الميدان', s11_p1_4:'إغلاق جولة تمويل السلسلة أ بـ 15 مليون دولار',
+  s11_p1_3:'التحقق من دقة نموذج قصاص AI في الميدان', s11_p1_4:'إغلاق جولة تمويل السلسلة أ بـ 15 مليون دولار',
   s11_funds:'استخدام الأموال: 40% بحث وتطوير، 30% إنتاج قصاص، 20% مبيعات وتطوير أعمال، 10% عمليات',
   s11_p2b:'المرحلة 2 · الإيرادات', s11_p2h:'الإطلاق التجاري',
   s11_p2_1:'توقيع أول 2–3 عقود مؤسسية مدفوعة', s11_p2_2:'إطلاق تجارب حكومية مع الوزارة وSGS',
@@ -6978,13 +7069,13 @@ var SB_BULLETS_AR = [
   '<b style="color:var(--white)">التركيز على أكثر الأهداف واعدةً</b> — الذكاء الاصطناعي يُصنّف المناطق مسبقاً حسب احتمالية المعدنة',
   '<b style="color:var(--white)">تقليل تكاليف الاستكشاف بنسبة تصل إلى 66%</b> — من 15 مليون دولار إلى أقل من 400,000 دولار لتغطية مماثلة',
   '<b style="color:var(--white)">تسريع جداول الاكتشاف الزمنية</b> — من 24 شهراً إلى 8 أسابيع للمسوحات الإقليمية الكاملة',
-  '<b style="color:var(--white)">زيادة معدلات نجاح الاكتشاف بنسبة 67%</b> — AUC-ROC 0.87 مقابل 0.72 للاستهداف التقليدي'
+  '<b style="color:var(--white)">زيادة معدلات نجاح الاكتشاف بنسبة 67%</b> — محرك قصاص متعدد النماذج مقابل طرق الاستهداف التقليدية'
 ];
 var SB_BULLETS_EN = [
   '<b style="color:var(--white)">Focus on the most promising targets</b> — AI pre-ranks zones by mineralization probability',
   '<b style="color:var(--white)">Reduce exploration costs by up to 66%</b> — from $15M to under $400K for equivalent coverage',
   '<b style="color:var(--white)">Accelerate discovery timelines</b> — from 24 months to 8 weeks for full regional surveys',
-  '<b style="color:var(--white)">Increase discovery hit rates by 67%</b> — AUC-ROC 0.87 vs 0.72 for conventional targeting'
+  '<b style="color:var(--white)">Increase discovery hit rates by 67%</b> — QASSAS multi-model AI vs conventional targeting methods'
 ];
 
 function swHtml(el, ar, arHtml, enHtml){
