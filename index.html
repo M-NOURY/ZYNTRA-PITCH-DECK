@@ -246,7 +246,9 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 .snode:hover .sdot   { opacity:1; transform:scale(1.3); }
 
 /* ── Counter number style ── */
-.count-num { display:inline-block; transition: all .3s; }
+.count-num { display:inline-block; transition: all .3s; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+#s1 [id^="s1-stat"] { min-width: 0; }
+#s1 [id$="v"] { display: block; min-height: 1.1em; }
 
 /* ── Stagger delay variants ── */
 .snode:nth-child(1) .sring1 { animation-delay: 0s; }
@@ -554,30 +556,40 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
       <div class="sub" style="margin-top:8px">AI Infrastructure &nbsp;·&nbsp; Autonomous Robotics &nbsp;·&nbsp; Mineral Intelligence &nbsp;·&nbsp; Digital Twins &nbsp;·&nbsp; Vision 2030</div>
       <div class="badge" style="margin-top:22px"><div class="dv"></div><span>Aligned with Vision 2030</span></div>
       <div class="badge" style="margin-top:8px;border-color:rgba(0,195,255,.4);background:rgba(0,195,255,.07)" id="s1-aibadge"><div class="dv" style="background:var(--cyan)"></div><span style="color:var(--cyan)" id="s1-aibadge-text">2026 — The Year of Artificial Intelligence in Saudi Arabia</span></div>
-      <div style="display:flex;gap:14px;margin-top:24px">
-        <div style="text-align:center">
-          <div style="font-family:var(--fh);font-size:26px;font-weight:700;color:var(--cyan)"><span class="count-num" data-target="11" data-dur="1400" id="s1-stat1v">11</span></div>
-          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase" id="s1-stat1l">Areas Validated</div>
+      <div style="display:flex;gap:8px;margin-top:24px;align-items:flex-start;flex-wrap:nowrap">
+        <div style="text-align:center;flex:1;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;color:var(--cyan);white-space:nowrap"><span class="count-num" data-target="11" data-dur="1400" id="s1-stat1v">11</span></div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat1l">Areas Validated</div>
         </div>
-        <div style="width:1px;background:rgba(255,255,255,.08)"></div>
-        <div style="text-align:center">
-          <div style="font-family:var(--fh);font-size:26px;font-weight:700;color:var(--blue)"><span class="count-num" data-target="1383" data-dur="1800" id="s1-stat4v">1,383</span></div>
-          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase" id="s1-stat4l">Drill-Ready Targets</div>
+        <div style="width:1px;background:rgba(255,255,255,.08);align-self:stretch"></div>
+        <div style="text-align:center;flex:1;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;color:var(--blue);white-space:nowrap"><span class="count-num" data-target="1383" data-dur="1800" id="s1-stat4v">1,383</span></div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat4l">Drill-Ready Targets</div>
         </div>
-        <div style="width:1px;background:rgba(255,255,255,.08)"></div>
-        <div style="text-align:center">
-          <div style="font-family:var(--fh);font-size:26px;font-weight:700;color:var(--magenta)"><span class="count-num" data-target="277" data-dur="1600" id="s1-stat5v">277</span></div>
-          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase" id="s1-stat5l">Tier-1 Priority</div>
+        <div style="width:1px;background:rgba(255,255,255,.08);align-self:stretch"></div>
+        <div style="text-align:center;flex:1;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;color:var(--magenta);white-space:nowrap"><span class="count-num" data-target="277" data-dur="1600" id="s1-stat5v">277</span></div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat5l">Tier-1 Drill-Ready</div>
         </div>
-        <div style="width:1px;background:rgba(255,255,255,.08)"></div>
-        <div style="text-align:center">
-          <div style="font-family:var(--fh);font-size:26px;font-weight:700;color:var(--purple)"><span class="count-num" data-target="91" data-suffix="%" data-dur="1800" id="s1-stat2v">91%</span></div>
-          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase" id="s1-stat2l">AI Interpretation</div>
+        <div style="width:1px;background:rgba(255,255,255,.08);align-self:stretch"></div>
+        <div style="text-align:center;flex:1;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;color:var(--purple);white-space:nowrap"><span class="count-num" data-target="91" data-suffix="%" data-dur="1800" id="s1-stat2v">91%</span></div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat2l">AI Interpretation</div>
         </div>
-        <div style="width:1px;background:rgba(255,255,255,.08)"></div>
-        <div style="text-align:center">
-          <div style="font-family:var(--fh);font-size:26px;font-weight:700;color:var(--gold)"><span class="count-num" data-target="1" data-dur="1200" id="s1-stat3v">1</span></div>
-          <div style="font-family:var(--fb);font-size:10px;letter-spacing:2px;color:var(--gray);text-transform:uppercase" id="s1-stat3l">Production Pilot</div>
+        <div style="width:1px;background:rgba(255,255,255,.08);align-self:stretch"></div>
+        <div style="text-align:center;flex:1.4;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;background:linear-gradient(135deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap">99.9%</div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat6l">Faster Mineral Exploration</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,.08);align-self:stretch"></div>
+        <div style="text-align:center;flex:1;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap">97%</div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat7l">Cutting Cost for Mineral Exploration</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,.08);align-self:stretch"></div>
+        <div style="text-align:center;flex:1;min-width:0">
+          <div style="font-family:var(--fh);font-size:32px;font-weight:700;color:var(--gold);white-space:nowrap"><span class="count-num" data-target="1" data-dur="1200" id="s1-stat3v">1</span></div>
+          <div style="font-family:var(--fb);font-size:9.5px;letter-spacing:1.2px;color:var(--gray);text-transform:uppercase;line-height:1.25;margin-top:6px" id="s1-stat3l">Production Pilot on Real Government Data</div>
         </div>
       </div>
     </div>
@@ -4861,12 +4873,18 @@ function setupCanvas(id){
       suffix = raw.replace(/[0-9.-]/g,'').replace(prefix,'');
     }
     var start=Date.now();
+    // Pin width to final value to prevent layout shake during animation
+    var finalText = prefix+(dec>0?target.toFixed(dec):target.toLocaleString())+suffix;
+    el.textContent = finalText;
+    var w = el.getBoundingClientRect().width;
+    if(w > 0) el.style.minWidth = Math.ceil(w) + 'px';
+    el.textContent = prefix + '0' + suffix;
     function tick(){
       var p=Math.min((Date.now()-start)/dur,1);
       var v=easeOut(p)*target;
-      el.textContent=prefix+(dec>0?v.toFixed(dec):Math.floor(v))+suffix;
+      el.textContent=prefix+(dec>0?v.toFixed(dec):Math.floor(v).toLocaleString())+suffix;
       if(p<1) requestAnimationFrame(tick);
-      else el.textContent=prefix+(dec>0?target.toFixed(dec):target)+suffix;
+      else el.textContent=prefix+(dec>0?target.toFixed(dec):target.toLocaleString())+suffix;
     }
     tick();
   }
@@ -6685,7 +6703,7 @@ function sw(el, ar, arText){ ar ? ap(el, arText) : rs(el); }
 var D = {
   s1_conf:'الربع الأول 2026 · سري', s1_label:'أول شركة سعودية متكاملة للذكاء الاصطناعي والأنظمة المستقلة',
   s1_aibadge:'2026 — عام الذكاء الاصطناعي في المملكة العربية السعودية',
-  s1_stat1l:'منطقة موثقة', s1_stat4l:'هدف جاهز للحفر', s1_stat5l:'أولوية المستوى الأول', s1_stat2l:'تفسير الذكاء الاصطناعي', s1_stat3l:'تجربة إنتاجية',
+  s1_stat1l:'منطقة موثقة', s1_stat4l:'هدف جاهز للحفر', s1_stat5l:'المستوى الأول جاهز للحفر', s1_stat2l:'تفسير الذكاء الاصطناعي', s1_stat3l:'تجربة إنتاجية على بيانات حكومية حقيقية', s1_stat6l:'استكشاف معادن أسرع', s1_stat7l:'خفض تكلفة استكشاف المعادن',
   s1_tagline:'نُشغِّل مستقبل الذكاء الاصطناعي في المملكة — من البيانات إلى الفعل',
   s1_sub:'بنية تحتية للذكاء الاصطناعي · روبوتات مستقلة · استخبارات معدنية · توائم رقمية · رؤية 2030',
   s1_badge:'متوافق مع رؤية 2030', s1_series:'هدف السلسلة أ', s1_patents:'براءة اختراع معلقة',
@@ -6901,6 +6919,8 @@ function slide1(ar){
   sw(q('#s1-stat5l'), ar, D.s1_stat5l);
   sw(q('#s1-stat2l'), ar, D.s1_stat2l);
   sw(q('#s1-stat3l'), ar, D.s1_stat3l);
+  sw(q('#s1-stat6l'), ar, D.s1_stat6l);
+  sw(q('#s1-stat7l'), ar, D.s1_stat7l);
   var sh = q('#s1 .shead'); if(sh) sw(sh.lastElementChild, ar, D.s1_conf);
   qa('#s1 [style*="letter-spacing:2px"][style*="color:var(--gray)"]').forEach(function(el){
     var orig = el.getAttribute('data-i18n-orig') || el.textContent;
