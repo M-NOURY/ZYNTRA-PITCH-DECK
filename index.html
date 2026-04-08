@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>ZYNTRA — Pitch Deck 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   --white:#fff;--gray:#8899BB;--lgray:#AAB8CC;
   --fh:'Rajdhani',sans-serif;--fb:'Exo 2',sans-serif;
 }
-html,body{width:100%;height:100%;overflow:hidden;background:#000}
+html,body{width:100%;height:100vh;height:100dvh;overflow:hidden;background:#000}
 body{font-family:var(--fb)}
 
 
@@ -42,7 +42,7 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
 #prog{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:200;transition:width .5s cubic-bezier(.4,0,.2,1)}
 
 /* ── DECK ── */
-#deck{width:100vw;height:100vh;position:relative;overflow:hidden}
+#deck{width:100vw;height:100vh;height:100dvh;position:relative;overflow:hidden}
 .slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .65s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;background:var(--navy);overflow:hidden}
 .slide.active{opacity:1;pointer-events:all}
 
@@ -401,7 +401,11 @@ body.ar-mode .mbadge,body.ar-mode .tagline,body.ar-mode .cbadge{
   #lang-switch{top:8px;transform:translateX(-50%) scale(.9)}
 
   /* Slides become scrollable */
-  .slide{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+  .slide{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+
+  /* Nav respects iOS home indicator */
+  #nav{bottom:calc(10px + env(safe-area-inset-bottom)) !important}
+  #lang-switch{top:calc(8px + env(safe-area-inset-top)) !important}
 
   /* Headers */
   .shead{padding:10px 16px 0;flex-wrap:wrap;gap:6px}
@@ -7483,10 +7487,11 @@ window.setDeckLang = function(lang){
   if(arb) arb.classList.toggle('active', ar);
   document.body.classList.toggle('ar-mode', ar);
 
-  slide1(ar); slide2(ar); slideA(ar); slideS3(ar);
-  slideB(ar); slideC(ar); slide4(ar); slide5(ar);
-  slide6(ar); slide7(ar); slide8(ar); slide9(ar);
-  slide10(ar); slide11(ar); slide12(ar); slide14(ar); slide15(ar); slide16(ar); slide17(ar); slide13(ar);
+  var _fns = [slide1,slide2,slideA,slideS3,slideB,slideC,slide4,slide5,slide6,slide7,slide8,slide9,slide10,slide11,slide12,slide14,slide15,slide16,slide17,slide13];
+  for(var i=0;i<_fns.length;i++){
+    try { if(typeof _fns[i]==='function') _fns[i](ar); }
+    catch(err){ console.warn('[setDeckLang] slide '+i+' failed:', err); }
+  }
 };
 
 /* ── Wire buttons after DOM ready ─────────────────────────────── */
